@@ -491,8 +491,15 @@ PROMPTS[12] = lambda hand, auction, conv: (
 )
 
 
+ORACLE_COLUMNS = {
+    'ben': 'ben_sayc_bid',
+    'bba': 'bba_bid',
+    'wbridge5': 'wbridge5_bid',
+}
+
+
 def test_prompt(prompt_id, model_name, dataset_path, n, conv="SAYC",
-                temperature=0.0, max_tokens=None, vote_k=1):
+                temperature=0.0, max_tokens=None, vote_k=1, oracle='ben'):
     """Test a prompt strategy and return accuracy."""
     import google.generativeai as genai
 
@@ -500,11 +507,14 @@ def test_prompt(prompt_id, model_name, dataset_path, n, conv="SAYC",
     genai.configure(api_key=api_key)
     model_ref = genai.GenerativeModel(model_name=model_name)
 
+    oracle_col = ORACLE_COLUMNS.get(oracle, 'ben_sayc_bid')
+
     records = []
     with open(dataset_path) as f:
         reader = csv.DictReader(f)
         for row in reader:
-            if row['ben_sayc_bid'].startswith('ERR'):
+            ref = row.get(oracle_col, '')
+            if not ref or ref.startswith('ERR'):
                 continue
             records.append(row)
             if len(records) >= n:
@@ -526,7 +536,7 @@ def test_prompt(prompt_id, model_name, dataset_path, n, conv="SAYC",
     for i, row in enumerate(records):
         hand = row['hand']
         auction = row['auction']
-        ben_bid = row['ben_sayc_bid']
+        ben_bid = row[oracle_col]
 
         prompt = prompt_fn(hand, auction, conv)
 
@@ -587,12 +597,14 @@ def main():
     parser.add_argument('--max_tokens', type=int, default=None)
     parser.add_argument('--vote_k', type=int, default=1,
                         help='Majority voting with K calls (requires temp>0)')
+    parser.add_argument('--oracle', default='ben', choices=['ben', 'bba', 'wbridge5'],
+                        help='Reference oracle: ben (default), bba, or wbridge5')
     args = parser.parse_args()
 
     if args.prompt_id is not None:
         test_prompt(args.prompt_id, args.model, args.dataset, args.n,
                     temperature=args.temperature, max_tokens=args.max_tokens,
-                    vote_k=args.vote_k)
+                    vote_k=args.vote_k, oracle=args.oracle)
     else:
         results = {}
         for pid in sorted(PROMPTS.keys()):
@@ -602,7 +614,7 @@ def main():
             acc, _ = test_prompt(pid, args.model, args.dataset, args.n,
                                  temperature=args.temperature,
                                  max_tokens=args.max_tokens,
-                                 vote_k=args.vote_k)
+                                 vote_k=args.vote_k, oracle=args.oracle)
             results[pid] = acc
 
         print(f"\n{'='*60}")

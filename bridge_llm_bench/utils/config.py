@@ -129,6 +129,26 @@ CONVENTIONS = {
         "5-card majors, 14-16 NT, Jacoby 2NT; "
         "2/1 responses are game-forcing."
     ),
+    "ACOL": (
+        "You are playing Standard Acol: "
+        "4-card majors, weak NT (12-14), strong 2C, limit raises. "
+        "Light opening bids (11+ HCP). Stayman and transfers over 1NT."
+    ),
+    "PRECISION": (
+        "You are playing Precision Club: "
+        "1C = 16+ HCP (artificial, forcing). 1D = 11-15 HCP (may be short). "
+        "1H/1S = 11-15 HCP, 5+ cards. 1NT = 13-15 balanced. 2C = 11-15, 6+ clubs."
+    ),
+    "SEF": (
+        "You are playing Standard European Francaise (SEF): "
+        "5-card majors, 15-17 NT, 2C strong artificial, 2D/2H/2S weak. "
+        "Checkback Stayman, Roudi over 1NT rebid."
+    ),
+    "POLISH_CLUB": (
+        "You are playing Polish Club: "
+        "1C = 12-14 balanced OR 18+ any. 1D = 12-17 unbalanced, 4+D. "
+        "1H/1S = 12-17, 5+ cards. 1NT = 15-17 balanced."
+    ),
 }
 
 # ── SAYC Knowledge Reference ────────────────────────────────────────

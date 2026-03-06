@@ -274,20 +274,52 @@ def main():
 
     print()
 
+    # Try to load BBA bids from dataset if available
+    bba_dataset = Path("data/ben_sayc_100.csv")
+    if bba_dataset.exists():
+        bba_bids = {}
+        with open(bba_dataset) as f:
+            reader = csv.DictReader(f)
+            if 'bba_bid' in (reader.fieldnames or []):
+                for row in reader:
+                    key = (row['hand'], row['auction'])
+                    if row.get('bba_bid'):
+                        bba_bids[key] = row['bba_bid']
+        if bba_bids:
+            matched = 0
+            for r in results:
+                key = (r['hand'], r['auction'])
+                if key in bba_bids:
+                    r['bba_bid'] = bba_bids[key]
+                    matched += 1
+            print(f"[INFO] Loaded {matched} BBA bids from {bba_dataset}")
+
+    # Check if BBA data is available
+    has_bba = any('bba_bid' in r and r.get('bba_bid', '') for r in results)
+
     # Print comparison table
     print()
-    print(f"{'#':>3} {'Hand':<30} {'Auction':<35} {'WBridge5':>8} {'Ben':>8} {'SAYCBr':>8} {'Match?':>7}")
-    print("-" * 105)
+    header = f"{'#':>3} {'Hand':<30} {'Auction':<35} {'WBridge5':>8} {'Ben':>8} {'SAYCBr':>8}"
+    if has_bba:
+        header += f" {'BBA':>8}"
+    header += f" {'Match?':>7}"
+    print(header)
+    print("-" * (113 if has_bba else 105))
 
     wb5_ben_match = 0
     wb5_sayc_match = 0
     ben_sayc_match = 0
+    wb5_bba_match = 0
+    ben_bba_match = 0
+    sayc_bba_match = 0
     all_match = 0
+    bba_count = 0
 
     for r in results:
         wb = r['ref_bid']
         bn = r['ben_bid']
         sb = r['sayc_bid']
+        bb = r.get('bba_bid', '')
 
         wb_bn = wb.upper() == bn.upper()
         wb_sb = wb.upper() == sb.upper()
@@ -296,10 +328,15 @@ def main():
         if wb_bn: wb5_ben_match += 1
         if wb_sb: wb5_sayc_match += 1
         if bn_sb: ben_sayc_match += 1
-        if wb_bn and wb_sb: all_match += 1
 
-        match_str = ''
+        if bb:
+            bba_count += 1
+            if wb.upper() == bb.upper(): wb5_bba_match += 1
+            if bn.upper() == bb.upper(): ben_bba_match += 1
+            if sb.upper() == bb.upper(): sayc_bba_match += 1
+
         if wb_bn and wb_sb:
+            all_match += 1
             match_str = 'ALL'
         elif wb_bn:
             match_str = 'WB=BN'
@@ -311,14 +348,22 @@ def main():
             match_str = 'NONE'
 
         auction_display = r['auction'] if r['auction'] else '(opening)'
-        print(f"{r['index']:>3} {r['hand']:<30} {auction_display:<35} {wb:>8} {bn:>8} {sb:>8} {match_str:>7}")
+        line = f"{r['index']:>3} {r['hand']:<30} {auction_display:<35} {wb:>8} {bn:>8} {sb:>8}"
+        if has_bba:
+            line += f" {bb:>8}"
+        line += f" {match_str:>7}"
+        print(line)
 
     n = len(results)
-    print("-" * 105)
+    print("-" * (113 if has_bba else 105))
     print(f"\nAgreement rates (N={n}):")
     print(f"  WBridge5 == Ben:       {wb5_ben_match}/{n} ({wb5_ben_match/n*100:.1f}%)")
     print(f"  WBridge5 == saycbridge:{wb5_sayc_match}/{n} ({wb5_sayc_match/n*100:.1f}%)")
     print(f"  Ben == saycbridge:     {ben_sayc_match}/{n} ({ben_sayc_match/n*100:.1f}%)")
+    if bba_count > 0:
+        print(f"  WBridge5 == BBA:       {wb5_bba_match}/{bba_count} ({wb5_bba_match/bba_count*100:.1f}%)")
+        print(f"  Ben == BBA:            {ben_bba_match}/{bba_count} ({ben_bba_match/bba_count*100:.1f}%)")
+        print(f"  saycbridge == BBA:     {sayc_bba_match}/{bba_count} ({sayc_bba_match/bba_count*100:.1f}%)")
     print(f"  All three agree:       {all_match}/{n} ({all_match/n*100:.1f}%)")
 
     # Now show LLM accuracy against each oracle
@@ -326,13 +371,17 @@ def main():
     for preds in llm_preds.values():
         models_in_data.update(preds.keys())
 
-    print(f"\n{'Model':<35} {'vs WBridge5':>12} {'vs Ben':>12} {'vs SAYCBr':>12}")
-    print("-" * 75)
+    header = f"\n{'Model':<35} {'vs WBridge5':>12} {'vs Ben':>12} {'vs SAYCBr':>12}"
+    if has_bba:
+        header += f" {'vs BBA':>12}"
+    print(header)
+    print("-" * (87 if has_bba else 75))
 
     for model in sorted(models_in_data):
         correct_wb = 0
         correct_ben = 0
         correct_sayc = 0
+        correct_bba = 0
         total = 0
 
         for r in results:
@@ -346,19 +395,31 @@ def main():
                     correct_ben += 1
                 if pred.upper() == r['sayc_bid'].upper():
                     correct_sayc += 1
+                bb = r.get('bba_bid', '')
+                if bb and pred.upper() == bb.upper():
+                    correct_bba += 1
 
         if total > 0:
-            print(f"{model:<35} {correct_wb:>3}/{total} ({correct_wb/total*100:4.0f}%) "
-                  f"{correct_ben:>3}/{total} ({correct_ben/total*100:4.0f}%) "
-                  f"{correct_sayc:>3}/{total} ({correct_sayc/total*100:4.0f}%)")
+            line = (f"{model:<35} {correct_wb:>3}/{total} ({correct_wb/total*100:4.0f}%) "
+                    f"{correct_ben:>3}/{total} ({correct_ben/total*100:4.0f}%) "
+                    f"{correct_sayc:>3}/{total} ({correct_sayc/total*100:4.0f}%)")
+            if has_bba:
+                line += f" {correct_bba:>3}/{total} ({correct_bba/total*100:4.0f}%)"
+            print(line)
 
     # Save detailed results
     out_path = Path("results/oracle_comparison.csv")
     with open(out_path, 'w', newline='') as f:
         writer = csv.writer(f)
-        writer.writerow(['index', 'hand', 'auction', 'wbridge5', 'ben_sayc', 'saycbridge'])
+        header = ['index', 'hand', 'auction', 'wbridge5', 'ben_sayc', 'saycbridge']
+        if has_bba:
+            header.append('bba')
+        writer.writerow(header)
         for r in results:
-            writer.writerow([r['index'], r['hand'], r['auction'], r['ref_bid'], r['ben_bid'], r['sayc_bid']])
+            row = [r['index'], r['hand'], r['auction'], r['ref_bid'], r['ben_bid'], r['sayc_bid']]
+            if has_bba:
+                row.append(r.get('bba_bid', ''))
+            writer.writerow(row)
 
     print(f"\nDetailed results saved to {out_path}")
 

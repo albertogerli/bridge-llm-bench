@@ -1,0 +1,1205 @@
+% Bridge LLM Bench - Test Positions for Oracle Bidding
+% Format: PBN (Portable Bridge Notation)
+% Each board shows one player's hand and the auction up to their turn.
+% The oracle should provide the next bid.
+
+[Board "1"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:Q52.6543.K732.AJ ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "2"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 97.A9872.AJ65.43 ... ..."]
+[Auction "N"]
+Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "3"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... J83.QJT.QT.K9852 ..."]
+[Auction "N"]
+Pass Pass ?
+{Reference: WBridge5=1S, BenSAYC=Pass}
+
+[Board "4"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AKT64.K.984.QT76"]
+[Auction "N"]
+Pass Pass 1S ?
+{Reference: WBridge5=1NT, BenSAYC=Pass}
+
+[Board "5"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:Q52.6543.K732.AJ ... ... ..."]
+[Auction "N"]
+Pass Pass 1S 1NT ?
+{Reference: WBridge5=Pass, BenSAYC=X}
+
+[Board "6"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 97.A9872.AJ65.43 ... ..."]
+[Auction "N"]
+Pass Pass 1S 1NT Pass ?
+{Reference: WBridge5=2D, BenSAYC=2D}
+
+[Board "7"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... J83.QJT.QT.K9852 ..."]
+[Auction "N"]
+Pass Pass 1S 1NT Pass 2D ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "8"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AKT64.K.984.QT76"]
+[Auction "N"]
+Pass Pass 1S 1NT Pass 2D Pass ?
+{Reference: WBridge5=2H, BenSAYC=Pass}
+
+[Board "9"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:Q52.6543.K732.AJ ... ... ..."]
+[Auction "N"]
+Pass Pass 1S 1NT Pass 2D Pass 2H ?
+{Reference: WBridge5=Pass, BenSAYC=3S}
+
+[Board "10"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 97.A9872.AJ65.43 ... ..."]
+[Auction "N"]
+Pass Pass 1S 1NT Pass 2D Pass 2H Pass ?
+{Reference: WBridge5=2NT, BenSAYC=3NT}
+
+[Board "11"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... J83.QJT.QT.K9852 ..."]
+[Auction "N"]
+Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "12"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AKT64.K.984.QT76"]
+[Auction "N"]
+Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "13"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:Q52.6543.K732.AJ ... ... ..."]
+[Auction "N"]
+Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "14"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:9862.KJ9652.74.3 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "15"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... AK4.AQT3.5.J8742 ... ..."]
+[Auction "N"]
+Pass ?
+{Reference: WBridge5=1H, BenSAYC=1C}
+
+[Board "16"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... T3.84.KQJ982.KQT ..."]
+[Auction "N"]
+Pass 1H ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "17"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... QJ75.7.AT63.A965"]
+[Auction "N"]
+Pass 1H Pass ?
+{Reference: WBridge5=2C, BenSAYC=1S}
+
+[Board "18"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:9862.KJ9652.74.3 ... ... ..."]
+[Auction "N"]
+Pass 1H Pass 2C ?
+{Reference: WBridge5=X, BenSAYC=Pass}
+
+[Board "19"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... AK4.AQT3.5.J8742 ... ..."]
+[Auction "N"]
+Pass 1H Pass 2C X ?
+{Reference: WBridge5=Pass, BenSAYC=3C}
+
+[Board "20"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... T3.84.KQJ982.KQT ..."]
+[Auction "N"]
+Pass 1H Pass 2C X Pass ?
+{Reference: WBridge5=2S, BenSAYC=3D}
+
+[Board "21"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... QJ75.7.AT63.A965"]
+[Auction "N"]
+Pass 1H Pass 2C X Pass 2S ?
+{Reference: WBridge5=X, BenSAYC=Pass}
+
+[Board "22"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:9862.KJ9652.74.3 ... ... ..."]
+[Auction "N"]
+Pass 1H Pass 2C X Pass 2S X ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "23"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... AK4.AQT3.5.J8742 ... ..."]
+[Auction "N"]
+Pass 1H Pass 2C X Pass 2S X Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "24"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... T3.84.KQJ982.KQT ..."]
+[Auction "N"]
+Pass 1H Pass 2C X Pass 2S X Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=3D}
+
+[Board "25"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:54..AQ953.AKQJT6 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=Pass, BenSAYC=1C}
+
+[Board "26"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... KJ93.KQ64.T74.73 ... ..."]
+[Auction "N"]
+Pass ?
+{Reference: WBridge5=1D, BenSAYC=Pass}
+
+[Board "27"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... AT7.32.KJ2.98542 ..."]
+[Auction "N"]
+Pass 1D ?
+{Reference: WBridge5=X, BenSAYC=Pass}
+
+[Board "28"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... Q862.AJT9875.86."]
+[Auction "N"]
+Pass 1D X ?
+{Reference: WBridge5=1S, BenSAYC=1H}
+
+[Board "29"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:54..AQ953.AKQJT6 ... ... ..."]
+[Auction "N"]
+Pass 1D X 1S ?
+{Reference: WBridge5=Pass, BenSAYC=5C}
+
+[Board "30"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... KJ93.KQ64.T74.73 ... ..."]
+[Auction "N"]
+Pass 1D X 1S Pass ?
+{Reference: WBridge5=2C, BenSAYC=2S}
+
+[Board "31"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... AT7.32.KJ2.98542 ..."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "32"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... Q862.AJT9875.86."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C Pass ?
+{Reference: WBridge5=4D, BenSAYC=2H}
+
+[Board "33"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:54..AQ953.AKQJT6 ... ... ..."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C Pass 4D ?
+{Reference: WBridge5=Pass, BenSAYC=5C}
+
+[Board "34"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... KJ93.KQ64.T74.73 ... ..."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C Pass 4D Pass ?
+{Reference: WBridge5=4H, BenSAYC=4S}
+
+[Board "35"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... AT7.32.KJ2.98542 ..."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C Pass 4D Pass 4H ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "36"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... Q862.AJT9875.86."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass ?
+{Reference: WBridge5=5D, BenSAYC=Pass}
+
+[Board "37"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:54..AQ953.AKQJT6 ... ... ..."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "38"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... KJ93.KQ64.T74.73 ... ..."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D Pass ?
+{Reference: WBridge5=Pass, BenSAYC=5S}
+
+[Board "39"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... AT7.32.KJ2.98542 ..."]
+[Auction "N"]
+Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "40"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:KQT4.AQ96542..32 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=1D, BenSAYC=1H}
+
+[Board "41"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 985.87.76542.874 ... ..."]
+[Auction "N"]
+1D ?
+{Reference: WBridge5=1H, BenSAYC=Pass}
+
+[Board "42"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... J32.KT3.AKJT.Q65 ..."]
+[Auction "N"]
+1D 1H ?
+{Reference: WBridge5=Pass, BenSAYC=3NT}
+
+[Board "43"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... A76.J.Q983.AKJT9"]
+[Auction "N"]
+1D 1H Pass ?
+{Reference: WBridge5=2S, BenSAYC=3NT}
+
+[Board "44"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:KQT4.AQ96542..32 ... ... ..."]
+[Auction "N"]
+1D 1H Pass 2S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "45"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 985.87.76542.874 ... ..."]
+[Auction "N"]
+1D 1H Pass 2S Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "46"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... J32.KT3.AKJT.Q65 ..."]
+[Auction "N"]
+1D 1H Pass 2S Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=3D}
+
+[Board "47"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:J963.T.AK85.T754 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "48"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 42.KQJ3.JT3.K863 ... ..."]
+[Auction "N"]
+Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "49"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... QT7.A86542.764.A ..."]
+[Auction "N"]
+Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=2H}
+
+[Board "50"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AK85.97.Q92.QJ92"]
+[Auction "N"]
+Pass Pass Pass ?
+{Reference: WBridge5=1D, BenSAYC=1C}
+
+[Board "51"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:J963.T.AK85.T754 ... ... ..."]
+[Auction "N"]
+Pass Pass Pass 1D ?
+{Reference: WBridge5=2C, BenSAYC=Pass}
+
+[Board "52"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 42.KQJ3.JT3.K863 ... ..."]
+[Auction "N"]
+Pass Pass Pass 1D 2C ?
+{Reference: WBridge5=2D, BenSAYC=X}
+
+[Board "53"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... QT7.A86542.764.A ..."]
+[Auction "N"]
+Pass Pass Pass 1D 2C 2D ?
+{Reference: WBridge5=3C, BenSAYC=2H}
+
+[Board "54"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AK85.97.Q92.QJ92"]
+[Auction "N"]
+Pass Pass Pass 1D 2C 2D 3C ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "55"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:J963.T.AK85.T754 ... ... ..."]
+[Auction "N"]
+Pass Pass Pass 1D 2C 2D 3C Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "56"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 42.KQJ3.JT3.K863 ... ..."]
+[Auction "N"]
+Pass Pass Pass 1D 2C 2D 3C Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=X}
+
+[Board "57"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:986.Q8642.972.83 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "58"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... QJT.KT73.T86.K92 ... ..."]
+[Auction "N"]
+Pass ?
+{Reference: WBridge5=1S, BenSAYC=Pass}
+
+[Board "59"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... 532.J5.AK53.AT64 ..."]
+[Auction "N"]
+Pass 1S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "60"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AK74.A9.QJ4.QJ75"]
+[Auction "N"]
+Pass 1S Pass ?
+{Reference: WBridge5=4C, BenSAYC=2NT}
+
+[Board "61"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:986.Q8642.972.83 ... ... ..."]
+[Auction "N"]
+Pass 1S Pass 4C ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "62"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... QJT.KT73.T86.K92 ... ..."]
+[Auction "N"]
+Pass 1S Pass 4C Pass ?
+{Reference: WBridge5=4D, BenSAYC=4S}
+
+[Board "63"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... 532.J5.AK53.AT64 ..."]
+[Auction "N"]
+Pass 1S Pass 4C Pass 4D ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "64"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AK74.A9.QJ4.QJ75"]
+[Auction "N"]
+Pass 1S Pass 4C Pass 4D Pass ?
+{Reference: WBridge5=4H, BenSAYC=4NT}
+
+[Board "65"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:986.Q8642.972.83 ... ... ..."]
+[Auction "N"]
+Pass 1S Pass 4C Pass 4D Pass 4H ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "66"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... QJT.KT73.T86.K92 ... ..."]
+[Auction "N"]
+Pass 1S Pass 4C Pass 4D Pass 4H Pass ?
+{Reference: WBridge5=4S, BenSAYC=4S}
+
+[Board "67"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... 532.J5.AK53.AT64 ..."]
+[Auction "N"]
+Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "68"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AK74.A9.QJ4.QJ75"]
+[Auction "N"]
+Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "69"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:986.Q8642.972.83 ... ... ..."]
+[Auction "N"]
+Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "70"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:2.T95.K74.AT9876 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "71"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... A9843.J4.Q983.K3 ... ..."]
+[Auction "N"]
+Pass ?
+{Reference: WBridge5=1S, BenSAYC=Pass}
+
+[Board "72"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... KJ5.AK762.J62.Q5 ..."]
+[Auction "N"]
+Pass 1S ?
+{Reference: WBridge5=4H, BenSAYC=2H}
+
+[Board "73"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... QT76.Q83.AT5.J42"]
+[Auction "N"]
+Pass 1S 4H ?
+{Reference: WBridge5=4S, BenSAYC=4S}
+
+[Board "74"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:2.T95.K74.AT9876 ... ... ..."]
+[Auction "N"]
+Pass 1S 4H 4S ?
+{Reference: WBridge5=Pass, BenSAYC=5H}
+
+[Board "75"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... A9843.J4.Q983.K3 ... ..."]
+[Auction "N"]
+Pass 1S 4H 4S Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "76"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... KJ5.AK762.J62.Q5 ..."]
+[Auction "N"]
+Pass 1S 4H 4S Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "77"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AK953.75.97.A976 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=1NT, BenSAYC=1S}
+
+[Board "78"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... Q86.KQJ8.642.KJ3 ... ..."]
+[Auction "N"]
+1NT ?
+{Reference: WBridge5=3D, BenSAYC=Pass}
+
+[Board "79"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... .AT64.KQJ83.QT42 ..."]
+[Auction "N"]
+1NT 3D ?
+{Reference: WBridge5=Pass, BenSAYC=3NT}
+
+[Board "80"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... JT742.932.AT5.85"]
+[Auction "N"]
+1NT 3D Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "81"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AK953.75.97.A976 ... ... ..."]
+[Auction "N"]
+1NT 3D Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "82"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:J74.KJ8753.965.7 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=1D, BenSAYC=2H}
+
+[Board "83"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 82.AQT62.AKJ.A82 ... ..."]
+[Auction "N"]
+1D ?
+{Reference: WBridge5=Pass, BenSAYC=X}
+
+[Board "84"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... QT96.9.T8732.QJ9 ..."]
+[Auction "N"]
+1D Pass ?
+{Reference: WBridge5=1H, BenSAYC=Pass}
+
+[Board "85"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AK53.4.Q4.KT6543"]
+[Auction "N"]
+1D Pass 1H ?
+{Reference: WBridge5=1S, BenSAYC=2C}
+
+[Board "86"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:J74.KJ8753.965.7 ... ... ..."]
+[Auction "N"]
+1D Pass 1H 1S ?
+{Reference: WBridge5=2C, BenSAYC=4H}
+
+[Board "87"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 82.AQT62.AKJ.A82 ... ..."]
+[Auction "N"]
+1D Pass 1H 1S 2C ?
+{Reference: WBridge5=Pass, BenSAYC=3NT}
+
+[Board "88"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... QT96.9.T8732.QJ9 ..."]
+[Auction "N"]
+1D Pass 1H 1S 2C Pass ?
+{Reference: WBridge5=2S, BenSAYC=2D}
+
+[Board "89"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AK53.4.Q4.KT6543"]
+[Auction "N"]
+1D Pass 1H 1S 2C Pass 2S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "90"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:J74.KJ8753.965.7 ... ... ..."]
+[Auction "N"]
+1D Pass 1H 1S 2C Pass 2S Pass ?
+{Reference: WBridge5=3C, BenSAYC=4H}
+
+[Board "91"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 82.AQT62.AKJ.A82 ... ..."]
+[Auction "N"]
+1D Pass 1H 1S 2C Pass 2S Pass 3C ?
+{Reference: WBridge5=Pass, BenSAYC=3NT}
+
+[Board "92"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... QT96.9.T8732.QJ9 ..."]
+[Auction "N"]
+1D Pass 1H 1S 2C Pass 2S Pass 3C Pass ?
+{Reference: WBridge5=5D, BenSAYC=3D}
+
+[Board "93"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... AK53.4.Q4.KT6543"]
+[Auction "N"]
+1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "94"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:J74.KJ8753.965.7 ... ... ..."]
+[Auction "N"]
+1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D Pass ?
+{Reference: WBridge5=Pass, BenSAYC=6H}
+
+[Board "95"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 82.AQT62.AKJ.A82 ... ..."]
+[Auction "N"]
+1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=X}
+
+[Board "96"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AJT8.J2.K8753.74 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=1C, BenSAYC=Pass}
+
+[Board "97"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... Q96432.A73.AJ.A6 ... ..."]
+[Auction "N"]
+1C ?
+{Reference: WBridge5=X, BenSAYC=1S}
+
+[Board "98"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... K75.T984.QT9.QJ8 ..."]
+[Auction "N"]
+1C X ?
+{Reference: WBridge5=1H, BenSAYC=1H}
+
+[Board "99"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... .KQ65.642.KT9532"]
+[Auction "N"]
+1C X 1H ?
+{Reference: WBridge5=Pass, BenSAYC=X}
+
+[Board "100"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AJT8.J2.K8753.74 ... ... ..."]
+[Auction "N"]
+1C X 1H Pass ?
+{Reference: WBridge5=2H, BenSAYC=1S}
+
+[Board "101"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... Q96432.A73.AJ.A6 ... ..."]
+[Auction "N"]
+1C X 1H Pass 2H ?
+{Reference: WBridge5=Pass, BenSAYC=2S}
+
+[Board "102"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... K75.T984.QT9.QJ8 ..."]
+[Auction "N"]
+1C X 1H Pass 2H Pass ?
+{Reference: WBridge5=4H, BenSAYC=Pass}
+
+[Board "103"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... .KQ65.642.KT9532"]
+[Auction "N"]
+1C X 1H Pass 2H Pass 4H ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "104"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AJT8.J2.K8753.74 ... ... ..."]
+[Auction "N"]
+1C X 1H Pass 2H Pass 4H Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "105"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... Q96432.A73.AJ.A6 ... ..."]
+[Auction "N"]
+1C X 1H Pass 2H Pass 4H Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "106"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:K974.QT86.Q98.A5 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=1C, BenSAYC=Pass}
+
+[Board "107"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 85.A5.A54.KQJT43 ... ..."]
+[Auction "N"]
+1C ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "108"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... AT32.K32.K76.962 ..."]
+[Auction "N"]
+1C Pass ?
+{Reference: WBridge5=1S, BenSAYC=1S}
+
+[Board "109"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... QJ6.J974.JT32.87"]
+[Auction "N"]
+1C Pass 1S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "110"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:K974.QT86.Q98.A5 ... ... ..."]
+[Auction "N"]
+1C Pass 1S Pass ?
+{Reference: WBridge5=2C, BenSAYC=2S}
+
+[Board "111"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 85.A5.A54.KQJT43 ... ..."]
+[Auction "N"]
+1C Pass 1S Pass 2C ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "112"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... AT32.K32.K76.962 ..."]
+[Auction "N"]
+1C Pass 1S Pass 2C Pass ?
+{Reference: WBridge5=3C, BenSAYC=Pass}
+
+[Board "113"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... QJ6.J974.JT32.87"]
+[Auction "N"]
+1C Pass 1S Pass 2C Pass 3C ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "114"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:K974.QT86.Q98.A5 ... ... ..."]
+[Auction "N"]
+1C Pass 1S Pass 2C Pass 3C Pass ?
+{Reference: WBridge5=3S, BenSAYC=3S}
+
+[Board "115"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 85.A5.A54.KQJT43 ... ..."]
+[Auction "N"]
+1C Pass 1S Pass 2C Pass 3C Pass 3S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "116"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... AT32.K32.K76.962 ..."]
+[Auction "N"]
+1C Pass 1S Pass 2C Pass 3C Pass 3S Pass ?
+{Reference: WBridge5=4S, BenSAYC=Pass}
+
+[Board "117"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... QJ6.J974.JT32.87"]
+[Auction "N"]
+1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "118"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:K974.QT86.Q98.A5 ... ... ..."]
+[Auction "N"]
+1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "119"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 85.A5.A54.KQJT43 ... ..."]
+[Auction "N"]
+1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "120"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:JT8.AKQ982.A4.Q3 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=1D, BenSAYC=1H}
+
+[Board "121"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... AK972.J64.K7.975 ... ..."]
+[Auction "N"]
+1D ?
+{Reference: WBridge5=X, BenSAYC=1S}
+
+[Board "122"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... Q6.T753.Q8653.K4 ..."]
+[Auction "N"]
+1D X ?
+{Reference: WBridge5=2S, BenSAYC=1H}
+
+[Board "123"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... 543..JT92.AJT862"]
+[Auction "N"]
+1D X 2S ?
+{Reference: WBridge5=Pass, BenSAYC=3C}
+
+[Board "124"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:JT8.AKQ982.A4.Q3 ... ... ..."]
+[Auction "N"]
+1D X 2S Pass ?
+{Reference: WBridge5=Pass, BenSAYC=4H}
+
+[Board "125"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... AK972.J64.K7.975 ... ..."]
+[Auction "N"]
+1D X 2S Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "126"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:52.8632.AJT.K974 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "127"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... A843.JT75.K986.Q ... ..."]
+[Auction "N"]
+Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "128"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... JT96.A9.742.AT82 ..."]
+[Auction "N"]
+Pass Pass ?
+{Reference: WBridge5=1C, BenSAYC=Pass}
+
+[Board "129"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... KQ7.KQ4.Q53.J653"]
+[Auction "N"]
+Pass Pass 1C ?
+{Reference: WBridge5=Pass, BenSAYC=X}
+
+[Board "130"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:52.8632.AJT.K974 ... ... ..."]
+[Auction "N"]
+Pass Pass 1C Pass ?
+{Reference: WBridge5=Pass, BenSAYC=1H}
+
+[Board "131"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... A843.JT75.K986.Q ... ..."]
+[Auction "N"]
+Pass Pass 1C Pass Pass ?
+{Reference: WBridge5=1NT, BenSAYC=X}
+
+[Board "132"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... JT96.A9.742.AT82 ..."]
+[Auction "N"]
+Pass Pass 1C Pass Pass 1NT ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "133"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... KQ7.KQ4.Q53.J653"]
+[Auction "N"]
+Pass Pass 1C Pass Pass 1NT Pass ?
+{Reference: WBridge5=3NT, BenSAYC=2NT}
+
+[Board "134"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:52.8632.AJT.K974 ... ... ..."]
+[Auction "N"]
+Pass Pass 1C Pass Pass 1NT Pass 3NT ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "135"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... A843.JT75.K986.Q ... ..."]
+[Auction "N"]
+Pass Pass 1C Pass Pass 1NT Pass 3NT Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "136"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... JT96.A9.742.AT82 ..."]
+[Auction "N"]
+Pass Pass 1C Pass Pass 1NT Pass 3NT Pass Pass ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "137"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AKJT82.A632.J.Q8 ... ... ..."]
+[Auction "N"]
+?
+{Reference: WBridge5=2C, BenSAYC=1S}
+
+[Board "138"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 53.K84.K2.JT9762 ... ..."]
+[Auction "N"]
+2C ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "139"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... Q.J75.AQ8754.AK5 ..."]
+[Auction "N"]
+2C Pass ?
+{Reference: WBridge5=2D, BenSAYC=3D}
+
+[Board "140"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... 9764.QT9.T963.43"]
+[Auction "N"]
+2C Pass 2D ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "141"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AKJT82.A632.J.Q8 ... ... ..."]
+[Auction "N"]
+2C Pass 2D Pass ?
+{Reference: WBridge5=2H, BenSAYC=2S}
+
+[Board "142"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 53.K84.K2.JT9762 ... ..."]
+[Auction "N"]
+2C Pass 2D Pass 2H ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "143"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... Q.J75.AQ8754.AK5 ..."]
+[Auction "N"]
+2C Pass 2D Pass 2H Pass ?
+{Reference: WBridge5=2S, BenSAYC=4NT}
+
+[Board "144"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... 9764.QT9.T963.43"]
+[Auction "N"]
+2C Pass 2D Pass 2H Pass 2S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "145"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AKJT82.A632.J.Q8 ... ... ..."]
+[Auction "N"]
+2C Pass 2D Pass 2H Pass 2S Pass ?
+{Reference: WBridge5=3S, BenSAYC=4S}
+
+[Board "146"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 53.K84.K2.JT9762 ... ..."]
+[Auction "N"]
+2C Pass 2D Pass 2H Pass 2S Pass 3S ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "147"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... Q.J75.AQ8754.AK5 ..."]
+[Auction "N"]
+2C Pass 2D Pass 2H Pass 2S Pass 3S Pass ?
+{Reference: WBridge5=4D, BenSAYC=4D}
+
+[Board "148"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... ... ... 9764.QT9.T963.43"]
+[Auction "N"]
+2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+
+[Board "149"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:AKJT82.A632.J.Q8 ... ... ..."]
+[Auction "N"]
+2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D Pass ?
+{Reference: WBridge5=4NT, BenSAYC=4S}
+
+[Board "150"]
+[Dealer "N"]
+[Vulnerable "None"]
+[Deal "N:... 53.K84.K2.JT9762 ... ..."]
+[Auction "N"]
+2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D Pass 4NT ?
+{Reference: WBridge5=Pass, BenSAYC=Pass}
+

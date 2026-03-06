@@ -1,0 +1,154 @@
+# Bridge LLM Bench - Test Positions
+# Format: position_id | hand | auction | seat | reference bids
+# The oracle should provide the next bid for the given hand and auction.
+
+#  1 | Seat: N | Hand: S:Q52 H:6543 D:K732 C:AJ | Auction: (opening) | Refs: WB5=Pass, Ben=Pass
+#  2 | Seat: E | Hand: S:97 H:A9872 D:AJ65 C:43 | Auction: Pass | Refs: WB5=Pass, Ben=Pass
+#  3 | Seat: S | Hand: S:J83 H:QJT D:QT C:K9852 | Auction: Pass Pass | Refs: WB5=1S, Ben=Pass
+#  4 | Seat: W | Hand: S:AKT64 H:K D:984 C:QT76 | Auction: Pass Pass 1S | Refs: WB5=1NT, Ben=Pass
+#  5 | Seat: N | Hand: S:Q52 H:6543 D:K732 C:AJ | Auction: Pass Pass 1S 1NT | Refs: WB5=Pass, Ben=X
+#  6 | Seat: E | Hand: S:97 H:A9872 D:AJ65 C:43 | Auction: Pass Pass 1S 1NT Pass | Refs: WB5=2D, Ben=2D
+#  7 | Seat: S | Hand: S:J83 H:QJT D:QT C:K9852 | Auction: Pass Pass 1S 1NT Pass 2D | Refs: WB5=Pass, Ben=Pass
+#  8 | Seat: W | Hand: S:AKT64 H:K D:984 C:QT76 | Auction: Pass Pass 1S 1NT Pass 2D Pass | Refs: WB5=2H, Ben=Pass
+#  9 | Seat: N | Hand: S:Q52 H:6543 D:K732 C:AJ | Auction: Pass Pass 1S 1NT Pass 2D Pass 2H | Refs: WB5=Pass, Ben=3S
+# 10 | Seat: E | Hand: S:97 H:A9872 D:AJ65 C:43 | Auction: Pass Pass 1S 1NT Pass 2D Pass 2H Pass | Refs: WB5=2NT, Ben=3NT
+# 11 | Seat: S | Hand: S:J83 H:QJT D:QT C:K9852 | Auction: Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT | Refs: WB5=Pass, Ben=Pass
+# 12 | Seat: W | Hand: S:AKT64 H:K D:984 C:QT76 | Auction: Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT Pass | Refs: WB5=Pass, Ben=Pass
+# 13 | Seat: N | Hand: S:Q52 H:6543 D:K732 C:AJ | Auction: Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT Pass Pass | Refs: WB5=Pass, Ben=Pass
+# 14 | Seat: N | Hand: S:9862 H:KJ9652 D:74 C:3 | Auction: (opening) | Refs: WB5=Pass, Ben=Pass
+# 15 | Seat: E | Hand: S:AK4 H:AQT3 D:5 C:J8742 | Auction: Pass | Refs: WB5=1H, Ben=1C
+# 16 | Seat: S | Hand: S:T3 H:84 D:KQJ982 C:KQT | Auction: Pass 1H | Refs: WB5=Pass, Ben=Pass
+# 17 | Seat: W | Hand: S:QJ75 H:7 D:AT63 C:A965 | Auction: Pass 1H Pass | Refs: WB5=2C, Ben=1S
+# 18 | Seat: N | Hand: S:9862 H:KJ9652 D:74 C:3 | Auction: Pass 1H Pass 2C | Refs: WB5=X, Ben=Pass
+# 19 | Seat: E | Hand: S:AK4 H:AQT3 D:5 C:J8742 | Auction: Pass 1H Pass 2C X | Refs: WB5=Pass, Ben=3C
+# 20 | Seat: S | Hand: S:T3 H:84 D:KQJ982 C:KQT | Auction: Pass 1H Pass 2C X Pass | Refs: WB5=2S, Ben=3D
+# 21 | Seat: W | Hand: S:QJ75 H:7 D:AT63 C:A965 | Auction: Pass 1H Pass 2C X Pass 2S | Refs: WB5=X, Ben=Pass
+# 22 | Seat: N | Hand: S:9862 H:KJ9652 D:74 C:3 | Auction: Pass 1H Pass 2C X Pass 2S X | Refs: WB5=Pass, Ben=Pass
+# 23 | Seat: E | Hand: S:AK4 H:AQT3 D:5 C:J8742 | Auction: Pass 1H Pass 2C X Pass 2S X Pass | Refs: WB5=Pass, Ben=Pass
+# 24 | Seat: S | Hand: S:T3 H:84 D:KQJ982 C:KQT | Auction: Pass 1H Pass 2C X Pass 2S X Pass Pass | Refs: WB5=Pass, Ben=3D
+# 25 | Seat: N | Hand: S:54 H: D:AQ953 C:AKQJT6 | Auction: (opening) | Refs: WB5=Pass, Ben=1C
+# 26 | Seat: E | Hand: S:KJ93 H:KQ64 D:T74 C:73 | Auction: Pass | Refs: WB5=1D, Ben=Pass
+# 27 | Seat: S | Hand: S:AT7 H:32 D:KJ2 C:98542 | Auction: Pass 1D | Refs: WB5=X, Ben=Pass
+# 28 | Seat: W | Hand: S:Q862 H:AJT9875 D:86 C: | Auction: Pass 1D X | Refs: WB5=1S, Ben=1H
+# 29 | Seat: N | Hand: S:54 H: D:AQ953 C:AKQJT6 | Auction: Pass 1D X 1S | Refs: WB5=Pass, Ben=5C
+# 30 | Seat: E | Hand: S:KJ93 H:KQ64 D:T74 C:73 | Auction: Pass 1D X 1S Pass | Refs: WB5=2C, Ben=2S
+# 31 | Seat: S | Hand: S:AT7 H:32 D:KJ2 C:98542 | Auction: Pass 1D X 1S Pass 2C | Refs: WB5=Pass, Ben=Pass
+# 32 | Seat: W | Hand: S:Q862 H:AJT9875 D:86 C: | Auction: Pass 1D X 1S Pass 2C Pass | Refs: WB5=4D, Ben=2H
+# 33 | Seat: N | Hand: S:54 H: D:AQ953 C:AKQJT6 | Auction: Pass 1D X 1S Pass 2C Pass 4D | Refs: WB5=Pass, Ben=5C
+# 34 | Seat: E | Hand: S:KJ93 H:KQ64 D:T74 C:73 | Auction: Pass 1D X 1S Pass 2C Pass 4D Pass | Refs: WB5=4H, Ben=4S
+# 35 | Seat: S | Hand: S:AT7 H:32 D:KJ2 C:98542 | Auction: Pass 1D X 1S Pass 2C Pass 4D Pass 4H | Refs: WB5=Pass, Ben=Pass
+# 36 | Seat: W | Hand: S:Q862 H:AJT9875 D:86 C: | Auction: Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass | Refs: WB5=5D, Ben=Pass
+# 37 | Seat: N | Hand: S:54 H: D:AQ953 C:AKQJT6 | Auction: Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D | Refs: WB5=Pass, Ben=Pass
+# 38 | Seat: E | Hand: S:KJ93 H:KQ64 D:T74 C:73 | Auction: Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D Pass | Refs: WB5=Pass, Ben=5S
+# 39 | Seat: S | Hand: S:AT7 H:32 D:KJ2 C:98542 | Auction: Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D Pass Pass | Refs: WB5=Pass, Ben=Pass
+# 40 | Seat: N | Hand: S:KQT4 H:AQ96542 D: C:32 | Auction: (opening) | Refs: WB5=1D, Ben=1H
+# 41 | Seat: E | Hand: S:985 H:87 D:76542 C:874 | Auction: 1D | Refs: WB5=1H, Ben=Pass
+# 42 | Seat: S | Hand: S:J32 H:KT3 D:AKJT C:Q65 | Auction: 1D 1H | Refs: WB5=Pass, Ben=3NT
+# 43 | Seat: W | Hand: S:A76 H:J D:Q983 C:AKJT9 | Auction: 1D 1H Pass | Refs: WB5=2S, Ben=3NT
+# 44 | Seat: N | Hand: S:KQT4 H:AQ96542 D: C:32 | Auction: 1D 1H Pass 2S | Refs: WB5=Pass, Ben=Pass
+# 45 | Seat: E | Hand: S:985 H:87 D:76542 C:874 | Auction: 1D 1H Pass 2S Pass | Refs: WB5=Pass, Ben=Pass
+# 46 | Seat: S | Hand: S:J32 H:KT3 D:AKJT C:Q65 | Auction: 1D 1H Pass 2S Pass Pass | Refs: WB5=Pass, Ben=3D
+# 47 | Seat: N | Hand: S:J963 H:T D:AK85 C:T754 | Auction: (opening) | Refs: WB5=Pass, Ben=Pass
+# 48 | Seat: E | Hand: S:42 H:KQJ3 D:JT3 C:K863 | Auction: Pass | Refs: WB5=Pass, Ben=Pass
+# 49 | Seat: S | Hand: S:QT7 H:A86542 D:764 C:A | Auction: Pass Pass | Refs: WB5=Pass, Ben=2H
+# 50 | Seat: W | Hand: S:AK85 H:97 D:Q92 C:QJ92 | Auction: Pass Pass Pass | Refs: WB5=1D, Ben=1C
+# 51 | Seat: N | Hand: S:J963 H:T D:AK85 C:T754 | Auction: Pass Pass Pass 1D | Refs: WB5=2C, Ben=Pass
+# 52 | Seat: E | Hand: S:42 H:KQJ3 D:JT3 C:K863 | Auction: Pass Pass Pass 1D 2C | Refs: WB5=2D, Ben=X
+# 53 | Seat: S | Hand: S:QT7 H:A86542 D:764 C:A | Auction: Pass Pass Pass 1D 2C 2D | Refs: WB5=3C, Ben=2H
+# 54 | Seat: W | Hand: S:AK85 H:97 D:Q92 C:QJ92 | Auction: Pass Pass Pass 1D 2C 2D 3C | Refs: WB5=Pass, Ben=Pass
+# 55 | Seat: N | Hand: S:J963 H:T D:AK85 C:T754 | Auction: Pass Pass Pass 1D 2C 2D 3C Pass | Refs: WB5=Pass, Ben=Pass
+# 56 | Seat: E | Hand: S:42 H:KQJ3 D:JT3 C:K863 | Auction: Pass Pass Pass 1D 2C 2D 3C Pass Pass | Refs: WB5=Pass, Ben=X
+# 57 | Seat: N | Hand: S:986 H:Q8642 D:972 C:83 | Auction: (opening) | Refs: WB5=Pass, Ben=Pass
+# 58 | Seat: E | Hand: S:QJT H:KT73 D:T86 C:K92 | Auction: Pass | Refs: WB5=1S, Ben=Pass
+# 59 | Seat: S | Hand: S:532 H:J5 D:AK53 C:AT64 | Auction: Pass 1S | Refs: WB5=Pass, Ben=Pass
+# 60 | Seat: W | Hand: S:AK74 H:A9 D:QJ4 C:QJ75 | Auction: Pass 1S Pass | Refs: WB5=4C, Ben=2NT
+# 61 | Seat: N | Hand: S:986 H:Q8642 D:972 C:83 | Auction: Pass 1S Pass 4C | Refs: WB5=Pass, Ben=Pass
+# 62 | Seat: E | Hand: S:QJT H:KT73 D:T86 C:K92 | Auction: Pass 1S Pass 4C Pass | Refs: WB5=4D, Ben=4S
+# 63 | Seat: S | Hand: S:532 H:J5 D:AK53 C:AT64 | Auction: Pass 1S Pass 4C Pass 4D | Refs: WB5=Pass, Ben=Pass
+# 64 | Seat: W | Hand: S:AK74 H:A9 D:QJ4 C:QJ75 | Auction: Pass 1S Pass 4C Pass 4D Pass | Refs: WB5=4H, Ben=4NT
+# 65 | Seat: N | Hand: S:986 H:Q8642 D:972 C:83 | Auction: Pass 1S Pass 4C Pass 4D Pass 4H | Refs: WB5=Pass, Ben=Pass
+# 66 | Seat: E | Hand: S:QJT H:KT73 D:T86 C:K92 | Auction: Pass 1S Pass 4C Pass 4D Pass 4H Pass | Refs: WB5=4S, Ben=4S
+# 67 | Seat: S | Hand: S:532 H:J5 D:AK53 C:AT64 | Auction: Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S | Refs: WB5=Pass, Ben=Pass
+# 68 | Seat: W | Hand: S:AK74 H:A9 D:QJ4 C:QJ75 | Auction: Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S Pass | Refs: WB5=Pass, Ben=Pass
+# 69 | Seat: N | Hand: S:986 H:Q8642 D:972 C:83 | Auction: Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S Pass Pass | Refs: WB5=Pass, Ben=Pass
+# 70 | Seat: N | Hand: S:2 H:T95 D:K74 C:AT9876 | Auction: (opening) | Refs: WB5=Pass, Ben=Pass
+# 71 | Seat: E | Hand: S:A9843 H:J4 D:Q983 C:K3 | Auction: Pass | Refs: WB5=1S, Ben=Pass
+# 72 | Seat: S | Hand: S:KJ5 H:AK762 D:J62 C:Q5 | Auction: Pass 1S | Refs: WB5=4H, Ben=2H
+# 73 | Seat: W | Hand: S:QT76 H:Q83 D:AT5 C:J42 | Auction: Pass 1S 4H | Refs: WB5=4S, Ben=4S
+# 74 | Seat: N | Hand: S:2 H:T95 D:K74 C:AT9876 | Auction: Pass 1S 4H 4S | Refs: WB5=Pass, Ben=5H
+# 75 | Seat: E | Hand: S:A9843 H:J4 D:Q983 C:K3 | Auction: Pass 1S 4H 4S Pass | Refs: WB5=Pass, Ben=Pass
+# 76 | Seat: S | Hand: S:KJ5 H:AK762 D:J62 C:Q5 | Auction: Pass 1S 4H 4S Pass Pass | Refs: WB5=Pass, Ben=Pass
+# 77 | Seat: N | Hand: S:AK953 H:75 D:97 C:A976 | Auction: (opening) | Refs: WB5=1NT, Ben=1S
+# 78 | Seat: E | Hand: S:Q86 H:KQJ8 D:642 C:KJ3 | Auction: 1NT | Refs: WB5=3D, Ben=Pass
+# 79 | Seat: S | Hand: S: H:AT64 D:KQJ83 C:QT42 | Auction: 1NT 3D | Refs: WB5=Pass, Ben=3NT
+# 80 | Seat: W | Hand: S:JT742 H:932 D:AT5 C:85 | Auction: 1NT 3D Pass | Refs: WB5=Pass, Ben=Pass
+# 81 | Seat: N | Hand: S:AK953 H:75 D:97 C:A976 | Auction: 1NT 3D Pass Pass | Refs: WB5=Pass, Ben=Pass
+# 82 | Seat: N | Hand: S:J74 H:KJ8753 D:965 C:7 | Auction: (opening) | Refs: WB5=1D, Ben=2H
+# 83 | Seat: E | Hand: S:82 H:AQT62 D:AKJ C:A82 | Auction: 1D | Refs: WB5=Pass, Ben=X
+# 84 | Seat: S | Hand: S:QT96 H:9 D:T8732 C:QJ9 | Auction: 1D Pass | Refs: WB5=1H, Ben=Pass
+# 85 | Seat: W | Hand: S:AK53 H:4 D:Q4 C:KT6543 | Auction: 1D Pass 1H | Refs: WB5=1S, Ben=2C
+# 86 | Seat: N | Hand: S:J74 H:KJ8753 D:965 C:7 | Auction: 1D Pass 1H 1S | Refs: WB5=2C, Ben=4H
+# 87 | Seat: E | Hand: S:82 H:AQT62 D:AKJ C:A82 | Auction: 1D Pass 1H 1S 2C | Refs: WB5=Pass, Ben=3NT
+# 88 | Seat: S | Hand: S:QT96 H:9 D:T8732 C:QJ9 | Auction: 1D Pass 1H 1S 2C Pass | Refs: WB5=2S, Ben=2D
+# 89 | Seat: W | Hand: S:AK53 H:4 D:Q4 C:KT6543 | Auction: 1D Pass 1H 1S 2C Pass 2S | Refs: WB5=Pass, Ben=Pass
+# 90 | Seat: N | Hand: S:J74 H:KJ8753 D:965 C:7 | Auction: 1D Pass 1H 1S 2C Pass 2S Pass | Refs: WB5=3C, Ben=4H
+# 91 | Seat: E | Hand: S:82 H:AQT62 D:AKJ C:A82 | Auction: 1D Pass 1H 1S 2C Pass 2S Pass 3C | Refs: WB5=Pass, Ben=3NT
+# 92 | Seat: S | Hand: S:QT96 H:9 D:T8732 C:QJ9 | Auction: 1D Pass 1H 1S 2C Pass 2S Pass 3C Pass | Refs: WB5=5D, Ben=3D
+# 93 | Seat: W | Hand: S:AK53 H:4 D:Q4 C:KT6543 | Auction: 1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D | Refs: WB5=Pass, Ben=Pass
+# 94 | Seat: N | Hand: S:J74 H:KJ8753 D:965 C:7 | Auction: 1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D Pass | Refs: WB5=Pass, Ben=6H
+# 95 | Seat: E | Hand: S:82 H:AQT62 D:AKJ C:A82 | Auction: 1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D Pass Pass | Refs: WB5=Pass, Ben=X
+# 96 | Seat: N | Hand: S:AJT8 H:J2 D:K8753 C:74 | Auction: (opening) | Refs: WB5=1C, Ben=Pass
+# 97 | Seat: E | Hand: S:Q96432 H:A73 D:AJ C:A6 | Auction: 1C | Refs: WB5=X, Ben=1S
+# 98 | Seat: S | Hand: S:K75 H:T984 D:QT9 C:QJ8 | Auction: 1C X | Refs: WB5=1H, Ben=1H
+# 99 | Seat: W | Hand: S: H:KQ65 D:642 C:KT9532 | Auction: 1C X 1H | Refs: WB5=Pass, Ben=X
+#100 | Seat: N | Hand: S:AJT8 H:J2 D:K8753 C:74 | Auction: 1C X 1H Pass | Refs: WB5=2H, Ben=1S
+#101 | Seat: E | Hand: S:Q96432 H:A73 D:AJ C:A6 | Auction: 1C X 1H Pass 2H | Refs: WB5=Pass, Ben=2S
+#102 | Seat: S | Hand: S:K75 H:T984 D:QT9 C:QJ8 | Auction: 1C X 1H Pass 2H Pass | Refs: WB5=4H, Ben=Pass
+#103 | Seat: W | Hand: S: H:KQ65 D:642 C:KT9532 | Auction: 1C X 1H Pass 2H Pass 4H | Refs: WB5=Pass, Ben=Pass
+#104 | Seat: N | Hand: S:AJT8 H:J2 D:K8753 C:74 | Auction: 1C X 1H Pass 2H Pass 4H Pass | Refs: WB5=Pass, Ben=Pass
+#105 | Seat: E | Hand: S:Q96432 H:A73 D:AJ C:A6 | Auction: 1C X 1H Pass 2H Pass 4H Pass Pass | Refs: WB5=Pass, Ben=Pass
+#106 | Seat: N | Hand: S:K974 H:QT86 D:Q98 C:A5 | Auction: (opening) | Refs: WB5=1C, Ben=Pass
+#107 | Seat: E | Hand: S:85 H:A5 D:A54 C:KQJT43 | Auction: 1C | Refs: WB5=Pass, Ben=Pass
+#108 | Seat: S | Hand: S:AT32 H:K32 D:K76 C:962 | Auction: 1C Pass | Refs: WB5=1S, Ben=1S
+#109 | Seat: W | Hand: S:QJ6 H:J974 D:JT32 C:87 | Auction: 1C Pass 1S | Refs: WB5=Pass, Ben=Pass
+#110 | Seat: N | Hand: S:K974 H:QT86 D:Q98 C:A5 | Auction: 1C Pass 1S Pass | Refs: WB5=2C, Ben=2S
+#111 | Seat: E | Hand: S:85 H:A5 D:A54 C:KQJT43 | Auction: 1C Pass 1S Pass 2C | Refs: WB5=Pass, Ben=Pass
+#112 | Seat: S | Hand: S:AT32 H:K32 D:K76 C:962 | Auction: 1C Pass 1S Pass 2C Pass | Refs: WB5=3C, Ben=Pass
+#113 | Seat: W | Hand: S:QJ6 H:J974 D:JT32 C:87 | Auction: 1C Pass 1S Pass 2C Pass 3C | Refs: WB5=Pass, Ben=Pass
+#114 | Seat: N | Hand: S:K974 H:QT86 D:Q98 C:A5 | Auction: 1C Pass 1S Pass 2C Pass 3C Pass | Refs: WB5=3S, Ben=3S
+#115 | Seat: E | Hand: S:85 H:A5 D:A54 C:KQJT43 | Auction: 1C Pass 1S Pass 2C Pass 3C Pass 3S | Refs: WB5=Pass, Ben=Pass
+#116 | Seat: S | Hand: S:AT32 H:K32 D:K76 C:962 | Auction: 1C Pass 1S Pass 2C Pass 3C Pass 3S Pass | Refs: WB5=4S, Ben=Pass
+#117 | Seat: W | Hand: S:QJ6 H:J974 D:JT32 C:87 | Auction: 1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S | Refs: WB5=Pass, Ben=Pass
+#118 | Seat: N | Hand: S:K974 H:QT86 D:Q98 C:A5 | Auction: 1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S Pass | Refs: WB5=Pass, Ben=Pass
+#119 | Seat: E | Hand: S:85 H:A5 D:A54 C:KQJT43 | Auction: 1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S Pass Pass | Refs: WB5=Pass, Ben=Pass
+#120 | Seat: N | Hand: S:JT8 H:AKQ982 D:A4 C:Q3 | Auction: (opening) | Refs: WB5=1D, Ben=1H
+#121 | Seat: E | Hand: S:AK972 H:J64 D:K7 C:975 | Auction: 1D | Refs: WB5=X, Ben=1S
+#122 | Seat: S | Hand: S:Q6 H:T753 D:Q8653 C:K4 | Auction: 1D X | Refs: WB5=2S, Ben=1H
+#123 | Seat: W | Hand: S:543 H: D:JT92 C:AJT862 | Auction: 1D X 2S | Refs: WB5=Pass, Ben=3C
+#124 | Seat: N | Hand: S:JT8 H:AKQ982 D:A4 C:Q3 | Auction: 1D X 2S Pass | Refs: WB5=Pass, Ben=4H
+#125 | Seat: E | Hand: S:AK972 H:J64 D:K7 C:975 | Auction: 1D X 2S Pass Pass | Refs: WB5=Pass, Ben=Pass
+#126 | Seat: N | Hand: S:52 H:8632 D:AJT C:K974 | Auction: (opening) | Refs: WB5=Pass, Ben=Pass
+#127 | Seat: E | Hand: S:A843 H:JT75 D:K986 C:Q | Auction: Pass | Refs: WB5=Pass, Ben=Pass
+#128 | Seat: S | Hand: S:JT96 H:A9 D:742 C:AT82 | Auction: Pass Pass | Refs: WB5=1C, Ben=Pass
+#129 | Seat: W | Hand: S:KQ7 H:KQ4 D:Q53 C:J653 | Auction: Pass Pass 1C | Refs: WB5=Pass, Ben=X
+#130 | Seat: N | Hand: S:52 H:8632 D:AJT C:K974 | Auction: Pass Pass 1C Pass | Refs: WB5=Pass, Ben=1H
+#131 | Seat: E | Hand: S:A843 H:JT75 D:K986 C:Q | Auction: Pass Pass 1C Pass Pass | Refs: WB5=1NT, Ben=X
+#132 | Seat: S | Hand: S:JT96 H:A9 D:742 C:AT82 | Auction: Pass Pass 1C Pass Pass 1NT | Refs: WB5=Pass, Ben=Pass
+#133 | Seat: W | Hand: S:KQ7 H:KQ4 D:Q53 C:J653 | Auction: Pass Pass 1C Pass Pass 1NT Pass | Refs: WB5=3NT, Ben=2NT
+#134 | Seat: N | Hand: S:52 H:8632 D:AJT C:K974 | Auction: Pass Pass 1C Pass Pass 1NT Pass 3NT | Refs: WB5=Pass, Ben=Pass
+#135 | Seat: E | Hand: S:A843 H:JT75 D:K986 C:Q | Auction: Pass Pass 1C Pass Pass 1NT Pass 3NT Pass | Refs: WB5=Pass, Ben=Pass
+#136 | Seat: S | Hand: S:JT96 H:A9 D:742 C:AT82 | Auction: Pass Pass 1C Pass Pass 1NT Pass 3NT Pass Pass | Refs: WB5=Pass, Ben=Pass
+#137 | Seat: N | Hand: S:AKJT82 H:A632 D:J C:Q8 | Auction: (opening) | Refs: WB5=2C, Ben=1S
+#138 | Seat: E | Hand: S:53 H:K84 D:K2 C:JT9762 | Auction: 2C | Refs: WB5=Pass, Ben=Pass
+#139 | Seat: S | Hand: S:Q H:J75 D:AQ8754 C:AK5 | Auction: 2C Pass | Refs: WB5=2D, Ben=3D
+#140 | Seat: W | Hand: S:9764 H:QT9 D:T963 C:43 | Auction: 2C Pass 2D | Refs: WB5=Pass, Ben=Pass
+#141 | Seat: N | Hand: S:AKJT82 H:A632 D:J C:Q8 | Auction: 2C Pass 2D Pass | Refs: WB5=2H, Ben=2S
+#142 | Seat: E | Hand: S:53 H:K84 D:K2 C:JT9762 | Auction: 2C Pass 2D Pass 2H | Refs: WB5=Pass, Ben=Pass
+#143 | Seat: S | Hand: S:Q H:J75 D:AQ8754 C:AK5 | Auction: 2C Pass 2D Pass 2H Pass | Refs: WB5=2S, Ben=4NT
+#144 | Seat: W | Hand: S:9764 H:QT9 D:T963 C:43 | Auction: 2C Pass 2D Pass 2H Pass 2S | Refs: WB5=Pass, Ben=Pass
+#145 | Seat: N | Hand: S:AKJT82 H:A632 D:J C:Q8 | Auction: 2C Pass 2D Pass 2H Pass 2S Pass | Refs: WB5=3S, Ben=4S
+#146 | Seat: E | Hand: S:53 H:K84 D:K2 C:JT9762 | Auction: 2C Pass 2D Pass 2H Pass 2S Pass 3S | Refs: WB5=Pass, Ben=Pass
+#147 | Seat: S | Hand: S:Q H:J75 D:AQ8754 C:AK5 | Auction: 2C Pass 2D Pass 2H Pass 2S Pass 3S Pass | Refs: WB5=4D, Ben=4D
+#148 | Seat: W | Hand: S:9764 H:QT9 D:T963 C:43 | Auction: 2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D | Refs: WB5=Pass, Ben=Pass
+#149 | Seat: N | Hand: S:AKJT82 H:A632 D:J C:Q8 | Auction: 2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D Pass | Refs: WB5=4NT, Ben=4S
+#150 | Seat: E | Hand: S:53 H:K84 D:K2 C:JT9762 | Auction: 2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D Pass 4NT | Refs: WB5=Pass, Ben=Pass
