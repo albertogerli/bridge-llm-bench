@@ -1,0 +1,62 @@
+{
+  "SAYC": {
+    "accuracy": 0.7066666666666667,
+    "exact": 106,
+    "n": 150,
+    "net_imps": 1,
+    "mean_imp": 0.006666666666666667,
+    "n_better": 11,
+    "n_worse": 10,
+    "n_zero": 129
+  },
+  "2/1": {
+    "accuracy": 0.6666666666666666,
+    "exact": 100,
+    "n": 150,
+    "net_imps": -9,
+    "mean_imp": -0.06,
+    "n_better": 12,
+    "n_worse": 13,
+    "n_zero": 125
+  },
+  "ACOL": {
+    "accuracy": 0.66,
+    "exact": 99,
+    "n": 150,
+    "net_imps": 15,
+    "mean_imp": 0.1,
+    "n_better": 15,
+    "n_worse": 9,
+    "n_zero": 126
+  },
+  "PRECISION": {
+    "accuracy": 0.6733333333333333,
+    "exact": 101,
+    "n": 150,
+    "net_imps": -1,
+    "mean_imp": -0.006666666666666667,
+    "n_better": 11,
+    "n_worse": 10,
+    "n_zero": 129
+  },
+  "SEF": {
+    "accuracy": 0.6933333333333334,
+    "exact": 104,
+    "n": 150,
+    "net_imps": -16,
+    "mean_imp": -0.10666666666666667,
+    "n_better": 10,
+    "n_worse": 12,
+    "n_zero": 128
+  },
+  "POLISH_CLUB": {
+    "accuracy": 0.7133333333333334,
+    "exact": 107,
+    "n": 150,
+    "net_imps": -9,
+    "mean_imp": -0.06,
+    "n_better": 8,
+    "n_worse": 10,
+    "n_zero": 132
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "model": "gemini-3.1-flash-lite-preview",
+  "oracle": "bba",
+  "n": 150,
+  "baseline": 0.6866666666666666,
+  "results": {
+    "P20_baseline": {
+      "correct": 103,
+      "total": 150,
+      "acc": 0.6867,
+      "delta": 0.0
+    },
+    "no_ALL_rules": {
+      "correct": 102,
+      "total": 150,
+      "acc": 0.68,
+      "delta": -0.0067
+    },
+    "no_ALL_examples": {
+      "correct": 59,
+      "total": 150,
+      "acc": 0.3933,
+      "delta": -0.2933
+    },
+    "no_A+B+E": {
+      "correct": 110,
+      "total": 150,
+      "acc": 0.7333,
+      "delta": 0.0467
+    },
+    "no_A+B+C+E+G+H": {
+      "correct": 107,
+      "total": 150,
+      "acc": 0.7133,
+      "delta": 0.0267
+    }
+  }
+}

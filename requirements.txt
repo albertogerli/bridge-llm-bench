@@ -17,3 +17,6 @@ pytest-asyncio>=0.21.0
 
 # Optional for async operations
 aiohttp>=3.8.0
+
+# Double-dummy analysis
+endplay>=0.5.0

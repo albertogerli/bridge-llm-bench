@@ -1,151 +1,151 @@
-hand,auction,wbridge5_bid,ben_sayc_bid
-S:Q52 H:6543 D:K732 C:AJ,,Pass,Pass
-S:97 H:A9872 D:AJ65 C:43,Pass,Pass,Pass
-S:J83 H:QJT D:QT C:K9852,Pass Pass,1S,Pass
-S:AKT64 H:K D:984 C:QT76,Pass Pass 1S,1NT,Pass
-S:Q52 H:6543 D:K732 C:AJ,Pass Pass 1S 1NT,Pass,X
-S:97 H:A9872 D:AJ65 C:43,Pass Pass 1S 1NT Pass,2D,2D
-S:J83 H:QJT D:QT C:K9852,Pass Pass 1S 1NT Pass 2D,Pass,Pass
-S:AKT64 H:K D:984 C:QT76,Pass Pass 1S 1NT Pass 2D Pass,2H,Pass
-S:Q52 H:6543 D:K732 C:AJ,Pass Pass 1S 1NT Pass 2D Pass 2H,Pass,3S
-S:97 H:A9872 D:AJ65 C:43,Pass Pass 1S 1NT Pass 2D Pass 2H Pass,2NT,3NT
-S:J83 H:QJT D:QT C:K9852,Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT,Pass,Pass
-S:AKT64 H:K D:984 C:QT76,Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT Pass,Pass,Pass
-S:Q52 H:6543 D:K732 C:AJ,Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT Pass Pass,Pass,Pass
-S:9862 H:KJ9652 D:74 C:3,,Pass,Pass
-S:AK4 H:AQT3 D:5 C:J8742,Pass,1H,1C
-S:T3 H:84 D:KQJ982 C:KQT,Pass 1H,Pass,Pass
-S:QJ75 H:7 D:AT63 C:A965,Pass 1H Pass,2C,1S
-S:9862 H:KJ9652 D:74 C:3,Pass 1H Pass 2C,X,Pass
-S:AK4 H:AQT3 D:5 C:J8742,Pass 1H Pass 2C X,Pass,3C
-S:T3 H:84 D:KQJ982 C:KQT,Pass 1H Pass 2C X Pass,2S,3D
-S:QJ75 H:7 D:AT63 C:A965,Pass 1H Pass 2C X Pass 2S,X,Pass
-S:9862 H:KJ9652 D:74 C:3,Pass 1H Pass 2C X Pass 2S X,Pass,Pass
-S:AK4 H:AQT3 D:5 C:J8742,Pass 1H Pass 2C X Pass 2S X Pass,Pass,Pass
-S:T3 H:84 D:KQJ982 C:KQT,Pass 1H Pass 2C X Pass 2S X Pass Pass,Pass,3D
-S:54 H: D:AQ953 C:AKQJT6,,Pass,1C
-S:KJ93 H:KQ64 D:T74 C:73,Pass,1D,Pass
-S:AT7 H:32 D:KJ2 C:98542,Pass 1D,X,Pass
-S:Q862 H:AJT9875 D:86 C:,Pass 1D X,1S,1H
-S:54 H: D:AQ953 C:AKQJT6,Pass 1D X 1S,Pass,5C
-S:KJ93 H:KQ64 D:T74 C:73,Pass 1D X 1S Pass,2C,2S
-S:AT7 H:32 D:KJ2 C:98542,Pass 1D X 1S Pass 2C,Pass,Pass
-S:Q862 H:AJT9875 D:86 C:,Pass 1D X 1S Pass 2C Pass,4D,2H
-S:54 H: D:AQ953 C:AKQJT6,Pass 1D X 1S Pass 2C Pass 4D,Pass,5C
-S:KJ93 H:KQ64 D:T74 C:73,Pass 1D X 1S Pass 2C Pass 4D Pass,4H,4S
-S:AT7 H:32 D:KJ2 C:98542,Pass 1D X 1S Pass 2C Pass 4D Pass 4H,Pass,Pass
-S:Q862 H:AJT9875 D:86 C:,Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass,5D,Pass
-S:54 H: D:AQ953 C:AKQJT6,Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D,Pass,Pass
-S:KJ93 H:KQ64 D:T74 C:73,Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D Pass,Pass,5S
-S:AT7 H:32 D:KJ2 C:98542,Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D Pass Pass,Pass,Pass
-S:KQT4 H:AQ96542 D: C:32,,1D,1H
-S:985 H:87 D:76542 C:874,1D,1H,Pass
-S:J32 H:KT3 D:AKJT C:Q65,1D 1H,Pass,3NT
-S:A76 H:J D:Q983 C:AKJT9,1D 1H Pass,2S,3NT
-S:KQT4 H:AQ96542 D: C:32,1D 1H Pass 2S,Pass,Pass
-S:985 H:87 D:76542 C:874,1D 1H Pass 2S Pass,Pass,Pass
-S:J32 H:KT3 D:AKJT C:Q65,1D 1H Pass 2S Pass Pass,Pass,3D
-S:J963 H:T D:AK85 C:T754,,Pass,Pass
-S:42 H:KQJ3 D:JT3 C:K863,Pass,Pass,Pass
-S:QT7 H:A86542 D:764 C:A,Pass Pass,Pass,2H
-S:AK85 H:97 D:Q92 C:QJ92,Pass Pass Pass,1D,1C
-S:J963 H:T D:AK85 C:T754,Pass Pass Pass 1D,2C,Pass
-S:42 H:KQJ3 D:JT3 C:K863,Pass Pass Pass 1D 2C,2D,X
-S:QT7 H:A86542 D:764 C:A,Pass Pass Pass 1D 2C 2D,3C,2H
-S:AK85 H:97 D:Q92 C:QJ92,Pass Pass Pass 1D 2C 2D 3C,Pass,Pass
-S:J963 H:T D:AK85 C:T754,Pass Pass Pass 1D 2C 2D 3C Pass,Pass,Pass
-S:42 H:KQJ3 D:JT3 C:K863,Pass Pass Pass 1D 2C 2D 3C Pass Pass,Pass,X
-S:986 H:Q8642 D:972 C:83,,Pass,Pass
-S:QJT H:KT73 D:T86 C:K92,Pass,1S,Pass
-S:532 H:J5 D:AK53 C:AT64,Pass 1S,Pass,Pass
-S:AK74 H:A9 D:QJ4 C:QJ75,Pass 1S Pass,4C,2NT
-S:986 H:Q8642 D:972 C:83,Pass 1S Pass 4C,Pass,Pass
-S:QJT H:KT73 D:T86 C:K92,Pass 1S Pass 4C Pass,4D,4S
-S:532 H:J5 D:AK53 C:AT64,Pass 1S Pass 4C Pass 4D,Pass,Pass
-S:AK74 H:A9 D:QJ4 C:QJ75,Pass 1S Pass 4C Pass 4D Pass,4H,4NT
-S:986 H:Q8642 D:972 C:83,Pass 1S Pass 4C Pass 4D Pass 4H,Pass,Pass
-S:QJT H:KT73 D:T86 C:K92,Pass 1S Pass 4C Pass 4D Pass 4H Pass,4S,4S
-S:532 H:J5 D:AK53 C:AT64,Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S,Pass,Pass
-S:AK74 H:A9 D:QJ4 C:QJ75,Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S Pass,Pass,Pass
-S:986 H:Q8642 D:972 C:83,Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S Pass Pass,Pass,Pass
-S:2 H:T95 D:K74 C:AT9876,,Pass,Pass
-S:A9843 H:J4 D:Q983 C:K3,Pass,1S,Pass
-S:KJ5 H:AK762 D:J62 C:Q5,Pass 1S,4H,2H
-S:QT76 H:Q83 D:AT5 C:J42,Pass 1S 4H,4S,4S
-S:2 H:T95 D:K74 C:AT9876,Pass 1S 4H 4S,Pass,5H
-S:A9843 H:J4 D:Q983 C:K3,Pass 1S 4H 4S Pass,Pass,Pass
-S:KJ5 H:AK762 D:J62 C:Q5,Pass 1S 4H 4S Pass Pass,Pass,Pass
-S:AK953 H:75 D:97 C:A976,,1NT,1S
-S:Q86 H:KQJ8 D:642 C:KJ3,1NT,3D,Pass
-S: H:AT64 D:KQJ83 C:QT42,1NT 3D,Pass,3NT
-S:JT742 H:932 D:AT5 C:85,1NT 3D Pass,Pass,Pass
-S:AK953 H:75 D:97 C:A976,1NT 3D Pass Pass,Pass,Pass
-S:J74 H:KJ8753 D:965 C:7,,1D,2H
-S:82 H:AQT62 D:AKJ C:A82,1D,Pass,X
-S:QT96 H:9 D:T8732 C:QJ9,1D Pass,1H,Pass
-S:AK53 H:4 D:Q4 C:KT6543,1D Pass 1H,1S,2C
-S:J74 H:KJ8753 D:965 C:7,1D Pass 1H 1S,2C,4H
-S:82 H:AQT62 D:AKJ C:A82,1D Pass 1H 1S 2C,Pass,3NT
-S:QT96 H:9 D:T8732 C:QJ9,1D Pass 1H 1S 2C Pass,2S,2D
-S:AK53 H:4 D:Q4 C:KT6543,1D Pass 1H 1S 2C Pass 2S,Pass,Pass
-S:J74 H:KJ8753 D:965 C:7,1D Pass 1H 1S 2C Pass 2S Pass,3C,4H
-S:82 H:AQT62 D:AKJ C:A82,1D Pass 1H 1S 2C Pass 2S Pass 3C,Pass,3NT
-S:QT96 H:9 D:T8732 C:QJ9,1D Pass 1H 1S 2C Pass 2S Pass 3C Pass,5D,3D
-S:AK53 H:4 D:Q4 C:KT6543,1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D,Pass,Pass
-S:J74 H:KJ8753 D:965 C:7,1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D Pass,Pass,6H
-S:82 H:AQT62 D:AKJ C:A82,1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D Pass Pass,Pass,X
-S:AJT8 H:J2 D:K8753 C:74,,1C,Pass
-S:Q96432 H:A73 D:AJ C:A6,1C,X,1S
-S:K75 H:T984 D:QT9 C:QJ8,1C X,1H,1H
-S: H:KQ65 D:642 C:KT9532,1C X 1H,Pass,X
-S:AJT8 H:J2 D:K8753 C:74,1C X 1H Pass,2H,1S
-S:Q96432 H:A73 D:AJ C:A6,1C X 1H Pass 2H,Pass,2S
-S:K75 H:T984 D:QT9 C:QJ8,1C X 1H Pass 2H Pass,4H,Pass
-S: H:KQ65 D:642 C:KT9532,1C X 1H Pass 2H Pass 4H,Pass,Pass
-S:AJT8 H:J2 D:K8753 C:74,1C X 1H Pass 2H Pass 4H Pass,Pass,Pass
-S:Q96432 H:A73 D:AJ C:A6,1C X 1H Pass 2H Pass 4H Pass Pass,Pass,Pass
-S:K974 H:QT86 D:Q98 C:A5,,1C,Pass
-S:85 H:A5 D:A54 C:KQJT43,1C,Pass,Pass
-S:AT32 H:K32 D:K76 C:962,1C Pass,1S,1S
-S:QJ6 H:J974 D:JT32 C:87,1C Pass 1S,Pass,Pass
-S:K974 H:QT86 D:Q98 C:A5,1C Pass 1S Pass,2C,2S
-S:85 H:A5 D:A54 C:KQJT43,1C Pass 1S Pass 2C,Pass,Pass
-S:AT32 H:K32 D:K76 C:962,1C Pass 1S Pass 2C Pass,3C,Pass
-S:QJ6 H:J974 D:JT32 C:87,1C Pass 1S Pass 2C Pass 3C,Pass,Pass
-S:K974 H:QT86 D:Q98 C:A5,1C Pass 1S Pass 2C Pass 3C Pass,3S,3S
-S:85 H:A5 D:A54 C:KQJT43,1C Pass 1S Pass 2C Pass 3C Pass 3S,Pass,Pass
-S:AT32 H:K32 D:K76 C:962,1C Pass 1S Pass 2C Pass 3C Pass 3S Pass,4S,Pass
-S:QJ6 H:J974 D:JT32 C:87,1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S,Pass,Pass
-S:K974 H:QT86 D:Q98 C:A5,1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S Pass,Pass,Pass
-S:85 H:A5 D:A54 C:KQJT43,1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S Pass Pass,Pass,Pass
-S:JT8 H:AKQ982 D:A4 C:Q3,,1D,1H
-S:AK972 H:J64 D:K7 C:975,1D,X,1S
-S:Q6 H:T753 D:Q8653 C:K4,1D X,2S,1H
-S:543 H: D:JT92 C:AJT862,1D X 2S,Pass,3C
-S:JT8 H:AKQ982 D:A4 C:Q3,1D X 2S Pass,Pass,4H
-S:AK972 H:J64 D:K7 C:975,1D X 2S Pass Pass,Pass,Pass
-S:52 H:8632 D:AJT C:K974,,Pass,Pass
-S:A843 H:JT75 D:K986 C:Q,Pass,Pass,Pass
-S:JT96 H:A9 D:742 C:AT82,Pass Pass,1C,Pass
-S:KQ7 H:KQ4 D:Q53 C:J653,Pass Pass 1C,Pass,X
-S:52 H:8632 D:AJT C:K974,Pass Pass 1C Pass,Pass,1H
-S:A843 H:JT75 D:K986 C:Q,Pass Pass 1C Pass Pass,1NT,X
-S:JT96 H:A9 D:742 C:AT82,Pass Pass 1C Pass Pass 1NT,Pass,Pass
-S:KQ7 H:KQ4 D:Q53 C:J653,Pass Pass 1C Pass Pass 1NT Pass,3NT,2NT
-S:52 H:8632 D:AJT C:K974,Pass Pass 1C Pass Pass 1NT Pass 3NT,Pass,Pass
-S:A843 H:JT75 D:K986 C:Q,Pass Pass 1C Pass Pass 1NT Pass 3NT Pass,Pass,Pass
-S:JT96 H:A9 D:742 C:AT82,Pass Pass 1C Pass Pass 1NT Pass 3NT Pass Pass,Pass,Pass
-S:AKJT82 H:A632 D:J C:Q8,,2C,1S
-S:53 H:K84 D:K2 C:JT9762,2C,Pass,Pass
-S:Q H:J75 D:AQ8754 C:AK5,2C Pass,2D,3D
-S:9764 H:QT9 D:T963 C:43,2C Pass 2D,Pass,Pass
-S:AKJT82 H:A632 D:J C:Q8,2C Pass 2D Pass,2H,2S
-S:53 H:K84 D:K2 C:JT9762,2C Pass 2D Pass 2H,Pass,Pass
-S:Q H:J75 D:AQ8754 C:AK5,2C Pass 2D Pass 2H Pass,2S,4NT
-S:9764 H:QT9 D:T963 C:43,2C Pass 2D Pass 2H Pass 2S,Pass,Pass
-S:AKJT82 H:A632 D:J C:Q8,2C Pass 2D Pass 2H Pass 2S Pass,3S,4S
-S:53 H:K84 D:K2 C:JT9762,2C Pass 2D Pass 2H Pass 2S Pass 3S,Pass,Pass
-S:Q H:J75 D:AQ8754 C:AK5,2C Pass 2D Pass 2H Pass 2S Pass 3S Pass,4D,4D
-S:9764 H:QT9 D:T963 C:43,2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D,Pass,Pass
-S:AKJT82 H:A632 D:J C:Q8,2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D Pass,4NT,4S
-S:53 H:K84 D:K2 C:JT9762,2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D Pass 4NT,Pass,Pass
+hand,auction,wbridge5_bid,ben_sayc_bid,bba_bid
+S:Q52 H:6543 D:K732 C:AJ,,Pass,Pass,Pass
+S:97 H:A9872 D:AJ65 C:43,Pass,Pass,Pass,Pass
+S:J83 H:QJT D:QT C:K9852,Pass Pass,1S,Pass,Pass
+S:AKT64 H:K D:984 C:QT76,Pass Pass 1S,1NT,Pass,Pass
+S:Q52 H:6543 D:K732 C:AJ,Pass Pass 1S 1NT,Pass,X,X
+S:97 H:A9872 D:AJ65 C:43,Pass Pass 1S 1NT Pass,2D,2D,2D
+S:J83 H:QJT D:QT C:K9852,Pass Pass 1S 1NT Pass 2D,Pass,Pass,Pass
+S:AKT64 H:K D:984 C:QT76,Pass Pass 1S 1NT Pass 2D Pass,2H,Pass,Pass
+S:Q52 H:6543 D:K732 C:AJ,Pass Pass 1S 1NT Pass 2D Pass 2H,Pass,3S,Pass
+S:97 H:A9872 D:AJ65 C:43,Pass Pass 1S 1NT Pass 2D Pass 2H Pass,2NT,3NT,2NT
+S:J83 H:QJT D:QT C:K9852,Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT,Pass,Pass,Pass
+S:AKT64 H:K D:984 C:QT76,Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT Pass,Pass,Pass,Pass
+S:Q52 H:6543 D:K732 C:AJ,Pass Pass 1S 1NT Pass 2D Pass 2H Pass 2NT Pass Pass,Pass,Pass,Pass
+S:9862 H:KJ9652 D:74 C:3,,Pass,Pass,Pass
+S:AK4 H:AQT3 D:5 C:J8742,Pass,1H,1C,1C
+S:T3 H:84 D:KQJ982 C:KQT,Pass 1H,Pass,Pass,Pass
+S:QJ75 H:7 D:AT63 C:A965,Pass 1H Pass,2C,1S,1S
+S:9862 H:KJ9652 D:74 C:3,Pass 1H Pass 2C,X,Pass,Pass
+S:AK4 H:AQT3 D:5 C:J8742,Pass 1H Pass 2C X,Pass,3C,3C
+S:T3 H:84 D:KQJ982 C:KQT,Pass 1H Pass 2C X Pass,2S,3D,3D
+S:QJ75 H:7 D:AT63 C:A965,Pass 1H Pass 2C X Pass 2S,X,Pass,Pass
+S:9862 H:KJ9652 D:74 C:3,Pass 1H Pass 2C X Pass 2S X,Pass,Pass,Pass
+S:AK4 H:AQT3 D:5 C:J8742,Pass 1H Pass 2C X Pass 2S X Pass,Pass,Pass,Pass
+S:T3 H:84 D:KQJ982 C:KQT,Pass 1H Pass 2C X Pass 2S X Pass Pass,Pass,3D,3D
+S:54 H: D:AQ953 C:AKQJT6,,Pass,1C,1C
+S:KJ93 H:KQ64 D:T74 C:73,Pass,1D,Pass,Pass
+S:AT7 H:32 D:KJ2 C:98542,Pass 1D,X,Pass,Pass
+S:Q862 H:AJT9875 D:86 C:,Pass 1D X,1S,1H,1H
+S:54 H: D:AQ953 C:AKQJT6,Pass 1D X 1S,Pass,5C,5C
+S:KJ93 H:KQ64 D:T74 C:73,Pass 1D X 1S Pass,2C,2S,2S
+S:AT7 H:32 D:KJ2 C:98542,Pass 1D X 1S Pass 2C,Pass,Pass,Pass
+S:Q862 H:AJT9875 D:86 C:,Pass 1D X 1S Pass 2C Pass,4D,2H,2H
+S:54 H: D:AQ953 C:AKQJT6,Pass 1D X 1S Pass 2C Pass 4D,Pass,5C,5C
+S:KJ93 H:KQ64 D:T74 C:73,Pass 1D X 1S Pass 2C Pass 4D Pass,4H,4S,4S
+S:AT7 H:32 D:KJ2 C:98542,Pass 1D X 1S Pass 2C Pass 4D Pass 4H,Pass,Pass,Pass
+S:Q862 H:AJT9875 D:86 C:,Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass,5D,Pass,Pass
+S:54 H: D:AQ953 C:AKQJT6,Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D,Pass,Pass,Pass
+S:KJ93 H:KQ64 D:T74 C:73,Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D Pass,Pass,5S,Pass
+S:AT7 H:32 D:KJ2 C:98542,Pass 1D X 1S Pass 2C Pass 4D Pass 4H Pass 5D Pass Pass,Pass,Pass,Pass
+S:KQT4 H:AQ96542 D: C:32,,1D,1H,1H
+S:985 H:87 D:76542 C:874,1D,1H,Pass,Pass
+S:J32 H:KT3 D:AKJT C:Q65,1D 1H,Pass,3NT,3NT
+S:A76 H:J D:Q983 C:AKJT9,1D 1H Pass,2S,3NT,2C
+S:KQT4 H:AQ96542 D: C:32,1D 1H Pass 2S,Pass,Pass,Pass
+S:985 H:87 D:76542 C:874,1D 1H Pass 2S Pass,Pass,Pass,Pass
+S:J32 H:KT3 D:AKJT C:Q65,1D 1H Pass 2S Pass Pass,Pass,3D,Pass
+S:J963 H:T D:AK85 C:T754,,Pass,Pass,Pass
+S:42 H:KQJ3 D:JT3 C:K863,Pass,Pass,Pass,Pass
+S:QT7 H:A86542 D:764 C:A,Pass Pass,Pass,2H,Pass
+S:AK85 H:97 D:Q92 C:QJ92,Pass Pass Pass,1D,1C,1C
+S:J963 H:T D:AK85 C:T754,Pass Pass Pass 1D,2C,Pass,Pass
+S:42 H:KQJ3 D:JT3 C:K863,Pass Pass Pass 1D 2C,2D,X,X
+S:QT7 H:A86542 D:764 C:A,Pass Pass Pass 1D 2C 2D,3C,2H,2H
+S:AK85 H:97 D:Q92 C:QJ92,Pass Pass Pass 1D 2C 2D 3C,Pass,Pass,Pass
+S:J963 H:T D:AK85 C:T754,Pass Pass Pass 1D 2C 2D 3C Pass,Pass,Pass,Pass
+S:42 H:KQJ3 D:JT3 C:K863,Pass Pass Pass 1D 2C 2D 3C Pass Pass,Pass,X,Pass
+S:986 H:Q8642 D:972 C:83,,Pass,Pass,Pass
+S:QJT H:KT73 D:T86 C:K92,Pass,1S,Pass,Pass
+S:532 H:J5 D:AK53 C:AT64,Pass 1S,Pass,Pass,Pass
+S:AK74 H:A9 D:QJ4 C:QJ75,Pass 1S Pass,4C,2NT,2NT
+S:986 H:Q8642 D:972 C:83,Pass 1S Pass 4C,Pass,Pass,Pass
+S:QJT H:KT73 D:T86 C:K92,Pass 1S Pass 4C Pass,4D,4S,4S
+S:532 H:J5 D:AK53 C:AT64,Pass 1S Pass 4C Pass 4D,Pass,Pass,Pass
+S:AK74 H:A9 D:QJ4 C:QJ75,Pass 1S Pass 4C Pass 4D Pass,4H,4NT,4NT
+S:986 H:Q8642 D:972 C:83,Pass 1S Pass 4C Pass 4D Pass 4H,Pass,Pass,Pass
+S:QJT H:KT73 D:T86 C:K92,Pass 1S Pass 4C Pass 4D Pass 4H Pass,4S,4S,4S
+S:532 H:J5 D:AK53 C:AT64,Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S,Pass,Pass,Pass
+S:AK74 H:A9 D:QJ4 C:QJ75,Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S Pass,Pass,Pass,Pass
+S:986 H:Q8642 D:972 C:83,Pass 1S Pass 4C Pass 4D Pass 4H Pass 4S Pass Pass,Pass,Pass,Pass
+S:2 H:T95 D:K74 C:AT9876,,Pass,Pass,Pass
+S:A9843 H:J4 D:Q983 C:K3,Pass,1S,Pass,Pass
+S:KJ5 H:AK762 D:J62 C:Q5,Pass 1S,4H,2H,1H
+S:QT76 H:Q83 D:AT5 C:J42,Pass 1S 4H,4S,4S,4S
+S:2 H:T95 D:K74 C:AT9876,Pass 1S 4H 4S,Pass,5H,Pass
+S:A9843 H:J4 D:Q983 C:K3,Pass 1S 4H 4S Pass,Pass,Pass,Pass
+S:KJ5 H:AK762 D:J62 C:Q5,Pass 1S 4H 4S Pass Pass,Pass,Pass,Pass
+S:AK953 H:75 D:97 C:A976,,1NT,1S,Pass
+S:Q86 H:KQJ8 D:642 C:KJ3,1NT,3D,Pass,Pass
+S: H:AT64 D:KQJ83 C:QT42,1NT 3D,Pass,3NT,3NT
+S:JT742 H:932 D:AT5 C:85,1NT 3D Pass,Pass,Pass,Pass
+S:AK953 H:75 D:97 C:A976,1NT 3D Pass Pass,Pass,Pass,Pass
+S:J74 H:KJ8753 D:965 C:7,,1D,2H,2H
+S:82 H:AQT62 D:AKJ C:A82,1D,Pass,X,X
+S:QT96 H:9 D:T8732 C:QJ9,1D Pass,1H,Pass,Pass
+S:AK53 H:4 D:Q4 C:KT6543,1D Pass 1H,1S,2C,2C
+S:J74 H:KJ8753 D:965 C:7,1D Pass 1H 1S,2C,4H,2H
+S:82 H:AQT62 D:AKJ C:A82,1D Pass 1H 1S 2C,Pass,3NT,2H
+S:QT96 H:9 D:T8732 C:QJ9,1D Pass 1H 1S 2C Pass,2S,2D,2D
+S:AK53 H:4 D:Q4 C:KT6543,1D Pass 1H 1S 2C Pass 2S,Pass,Pass,Pass
+S:J74 H:KJ8753 D:965 C:7,1D Pass 1H 1S 2C Pass 2S Pass,3C,4H,3H
+S:82 H:AQT62 D:AKJ C:A82,1D Pass 1H 1S 2C Pass 2S Pass 3C,Pass,3NT,3NT
+S:QT96 H:9 D:T8732 C:QJ9,1D Pass 1H 1S 2C Pass 2S Pass 3C Pass,5D,3D,3D
+S:AK53 H:4 D:Q4 C:KT6543,1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D,Pass,Pass,Pass
+S:J74 H:KJ8753 D:965 C:7,1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D Pass,Pass,6H,Pass
+S:82 H:AQT62 D:AKJ C:A82,1D Pass 1H 1S 2C Pass 2S Pass 3C Pass 5D Pass Pass,Pass,X,Pass
+S:AJT8 H:J2 D:K8753 C:74,,1C,Pass,Pass
+S:Q96432 H:A73 D:AJ C:A6,1C,X,1S,1S
+S:K75 H:T984 D:QT9 C:QJ8,1C X,1H,1H,1H
+S: H:KQ65 D:642 C:KT9532,1C X 1H,Pass,X,2C
+S:AJT8 H:J2 D:K8753 C:74,1C X 1H Pass,2H,1S,1S
+S:Q96432 H:A73 D:AJ C:A6,1C X 1H Pass 2H,Pass,2S,2S
+S:K75 H:T984 D:QT9 C:QJ8,1C X 1H Pass 2H Pass,4H,Pass,Pass
+S: H:KQ65 D:642 C:KT9532,1C X 1H Pass 2H Pass 4H,Pass,Pass,Pass
+S:AJT8 H:J2 D:K8753 C:74,1C X 1H Pass 2H Pass 4H Pass,Pass,Pass,Pass
+S:Q96432 H:A73 D:AJ C:A6,1C X 1H Pass 2H Pass 4H Pass Pass,Pass,Pass,Pass
+S:K974 H:QT86 D:Q98 C:A5,,1C,Pass,1C
+S:85 H:A5 D:A54 C:KQJT43,1C,Pass,Pass,Pass
+S:AT32 H:K32 D:K76 C:962,1C Pass,1S,1S,1S
+S:QJ6 H:J974 D:JT32 C:87,1C Pass 1S,Pass,Pass,Pass
+S:K974 H:QT86 D:Q98 C:A5,1C Pass 1S Pass,2C,2S,2S
+S:85 H:A5 D:A54 C:KQJT43,1C Pass 1S Pass 2C,Pass,Pass,Pass
+S:AT32 H:K32 D:K76 C:962,1C Pass 1S Pass 2C Pass,3C,Pass,Pass
+S:QJ6 H:J974 D:JT32 C:87,1C Pass 1S Pass 2C Pass 3C,Pass,Pass,Pass
+S:K974 H:QT86 D:Q98 C:A5,1C Pass 1S Pass 2C Pass 3C Pass,3S,3S,3S
+S:85 H:A5 D:A54 C:KQJT43,1C Pass 1S Pass 2C Pass 3C Pass 3S,Pass,Pass,Pass
+S:AT32 H:K32 D:K76 C:962,1C Pass 1S Pass 2C Pass 3C Pass 3S Pass,4S,Pass,4S
+S:QJ6 H:J974 D:JT32 C:87,1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S,Pass,Pass,Pass
+S:K974 H:QT86 D:Q98 C:A5,1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S Pass,Pass,Pass,Pass
+S:85 H:A5 D:A54 C:KQJT43,1C Pass 1S Pass 2C Pass 3C Pass 3S Pass 4S Pass Pass,Pass,Pass,Pass
+S:JT8 H:AKQ982 D:A4 C:Q3,,1D,1H,1H
+S:AK972 H:J64 D:K7 C:975,1D,X,1S,1S
+S:Q6 H:T753 D:Q8653 C:K4,1D X,2S,1H,1H
+S:543 H: D:JT92 C:AJT862,1D X 2S,Pass,3C,3C
+S:JT8 H:AKQ982 D:A4 C:Q3,1D X 2S Pass,Pass,4H,4H
+S:AK972 H:J64 D:K7 C:975,1D X 2S Pass Pass,Pass,Pass,Pass
+S:52 H:8632 D:AJT C:K974,,Pass,Pass,Pass
+S:A843 H:JT75 D:K986 C:Q,Pass,Pass,Pass,Pass
+S:JT96 H:A9 D:742 C:AT82,Pass Pass,1C,Pass,Pass
+S:KQ7 H:KQ4 D:Q53 C:J653,Pass Pass 1C,Pass,X,X
+S:52 H:8632 D:AJT C:K974,Pass Pass 1C Pass,Pass,1H,1H
+S:A843 H:JT75 D:K986 C:Q,Pass Pass 1C Pass Pass,1NT,X,X
+S:JT96 H:A9 D:742 C:AT82,Pass Pass 1C Pass Pass 1NT,Pass,Pass,Pass
+S:KQ7 H:KQ4 D:Q53 C:J653,Pass Pass 1C Pass Pass 1NT Pass,3NT,2NT,2NT
+S:52 H:8632 D:AJT C:K974,Pass Pass 1C Pass Pass 1NT Pass 3NT,Pass,Pass,Pass
+S:A843 H:JT75 D:K986 C:Q,Pass Pass 1C Pass Pass 1NT Pass 3NT Pass,Pass,Pass,Pass
+S:JT96 H:A9 D:742 C:AT82,Pass Pass 1C Pass Pass 1NT Pass 3NT Pass Pass,Pass,Pass,Pass
+S:AKJT82 H:A632 D:J C:Q8,,2C,1S,1S
+S:53 H:K84 D:K2 C:JT9762,2C,Pass,Pass,Pass
+S:Q H:J75 D:AQ8754 C:AK5,2C Pass,2D,3D,2D
+S:9764 H:QT9 D:T963 C:43,2C Pass 2D,Pass,Pass,Pass
+S:AKJT82 H:A632 D:J C:Q8,2C Pass 2D Pass,2H,2S,2S
+S:53 H:K84 D:K2 C:JT9762,2C Pass 2D Pass 2H,Pass,Pass,Pass
+S:Q H:J75 D:AQ8754 C:AK5,2C Pass 2D Pass 2H Pass,2S,4NT,3D
+S:9764 H:QT9 D:T963 C:43,2C Pass 2D Pass 2H Pass 2S,Pass,Pass,Pass
+S:AKJT82 H:A632 D:J C:Q8,2C Pass 2D Pass 2H Pass 2S Pass,3S,4S,3S
+S:53 H:K84 D:K2 C:JT9762,2C Pass 2D Pass 2H Pass 2S Pass 3S,Pass,Pass,Pass
+S:Q H:J75 D:AQ8754 C:AK5,2C Pass 2D Pass 2H Pass 2S Pass 3S Pass,4D,4D,4D
+S:9764 H:QT9 D:T963 C:43,2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D,Pass,Pass,Pass
+S:AKJT82 H:A632 D:J C:Q8,2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D Pass,4NT,4S,4S
+S:53 H:K84 D:K2 C:JT9762,2C Pass 2D Pass 2H Pass 2S Pass 3S Pass 4D Pass 4NT,Pass,Pass,Pass

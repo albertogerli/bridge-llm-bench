@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bridge Play Viewer</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #1a5c2a; color: #fff; min-height: 100vh; }
+
+.header { background: #0d3318; padding: 10px 20px; display: flex; justify-content: space-between; align-items: center; }
+.header h1 { font-size: 18px; }
+.deal-select { background: #1a5c2a; color: #fff; border: 1px solid #3a8c4a; padding: 5px 10px; border-radius: 4px; font-size: 14px; }
+
+.main { display: grid; grid-template-columns: 1fr 300px; gap: 10px; padding: 10px; max-width: 1200px; margin: 0 auto; }
+
+/* Bridge table */
+.table-area { position: relative; width: 100%; aspect-ratio: 1; max-width: 600px; margin: 0 auto; }
+
+.hand { position: absolute; text-align: center; }
+.hand.north { top: 0; left: 50%; transform: translateX(-50%); }
+.hand.south { bottom: 0; left: 50%; transform: translateX(-50%); }
+.hand.west { left: 0; top: 50%; transform: translateY(-50%); }
+.hand.east { right: 0; top: 50%; transform: translateY(-50%); }
+
+.hand-label { font-size: 13px; font-weight: bold; color: #8fc; margin-bottom: 2px; }
+.hand-label .hcp { font-weight: normal; color: #aaa; font-size: 11px; }
+.hand-label .role-tag { font-size: 10px; padding: 1px 4px; border-radius: 3px; margin-left: 4px; }
+.role-declarer { background: #2266cc; color: #fff; }
+.role-dummy { background: #886622; color: #fff; }
+.hand-cards { font-size: 13px; line-height: 1.4; }
+.suit-row { white-space: nowrap; }
+.suit-S { color: #4488ff; }
+.suit-H { color: #ff4444; }
+.suit-D { color: #ff8800; }
+.suit-C { color: #44cc44; }
+
+.card-played { opacity: 0.3; text-decoration: line-through; }
+
+/* Trick area - compass layout, cards at N/E/S/W positions */
+.trick-area { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 240px; height: 200px; background: rgba(0,0,0,0.25); border-radius: 10px; }
+
+.trick-card { font-size: 18px; font-weight: bold; padding: 4px 10px; border-radius: 5px;
+  background: rgba(255,255,255,0.92); color: #333; min-width: 46px; text-align: center;
+  position: absolute; box-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+.trick-card.north { top: 10px; left: 50%; transform: translateX(-50%); }
+.trick-card.south { bottom: 10px; left: 50%; transform: translateX(-50%); }
+.trick-card.west { left: 10px; top: 50%; transform: translateY(-50%); }
+.trick-card.east { right: 10px; top: 50%; transform: translateY(-50%); }
+
+.trick-card.mistake { background: #ff5555; color: #fff; }
+.trick-card.optimal { background: #55dd55; color: #222; }
+.trick-card.suboptimal { background: #eebb33; color: #222; }
+
+.trick-label { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-size: 11px; color: rgba(255,255,255,0.4); pointer-events: none; }
+
+/* Controls */
+.controls { display: flex; gap: 10px; align-items: center; justify-content: center; padding: 10px; }
+.btn { background: #2a7c3a; border: 1px solid #3a9c4a; color: #fff; padding: 8px 16px;
+  border-radius: 4px; cursor: pointer; font-size: 14px; }
+.btn:hover { background: #3a9c4a; }
+.btn:disabled { opacity: 0.4; cursor: default; }
+.speed-label { font-size: 12px; color: #aaa; }
+
+/* Info panel */
+.info-panel { background: #0d3318; border-radius: 8px; padding: 15px; }
+.info-section { margin-bottom: 15px; }
+.info-section h3 { font-size: 14px; color: #8fc; margin-bottom: 5px; border-bottom: 1px solid #2a5c3a; padding-bottom: 3px; }
+
+.contract-bar { font-size: 20px; font-weight: bold; text-align: center; padding: 10px;
+  background: rgba(0,0,0,0.3); border-radius: 6px; margin-bottom: 10px; }
+
+.score-row { display: flex; justify-content: space-between; font-size: 13px; padding: 2px 0; }
+.score-val { font-weight: bold; }
+.imp-pos { color: #66ff66; }
+.imp-neg { color: #ff6666; }
+.imp-zero { color: #aaa; }
+
+.trick-history { font-size: 12px; max-height: 200px; overflow-y: auto; }
+.trick-row { padding: 2px 4px; border-bottom: 1px solid #1a4c2a; display: flex; justify-content: space-between; }
+.trick-row.current { background: rgba(255,255,255,0.1); }
+.trick-winner { font-weight: bold; color: #8fc; }
+
+.auction-display { font-size: 12px; line-height: 1.8; }
+.bid { display: inline-block; padding: 1px 4px; margin: 1px; border-radius: 3px; background: rgba(255,255,255,0.1); }
+
+.stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; }
+.stat-item { font-size: 12px; }
+.stat-val { font-weight: bold; }
+
+.legend { font-size: 11px; margin-top: 10px; }
+.legend-item { display: flex; align-items: center; gap: 5px; margin: 2px 0; }
+.legend-dot { width: 12px; height: 12px; border-radius: 3px; }
+.legend-dot.green { background: #55dd55; }
+.legend-dot.red { background: #ff5555; }
+.legend-dot.yellow { background: #eebb33; }
+
+.nav-hint { text-align: center; font-size: 12px; color: #888; margin-top: 5px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Bridge Play Viewer</h1>
+  <select class="deal-select" id="dealSelect" onchange="loadDeal(this.value)">
+    <option value="">Loading deals...</option>
+  </select>
+</div>
+
+<div class="main">
+  <div>
+    <div class="table-area" id="table">
+      <div class="hand north" id="handN"><div class="hand-label" id="labelN">North</div><div class="hand-cards" id="cardsN"></div></div>
+      <div class="hand south" id="handS"><div class="hand-label" id="labelS">South</div><div class="hand-cards" id="cardsS"></div></div>
+      <div class="hand west" id="handW"><div class="hand-label" id="labelW">West</div><div class="hand-cards" id="cardsW"></div></div>
+      <div class="hand east" id="handE"><div class="hand-label" id="labelE">East</div><div class="hand-cards" id="cardsE"></div></div>
+      <div class="trick-area" id="trickArea"><div class="trick-label" id="trickLabel"></div></div>
+    </div>
+    <div class="controls">
+      <button class="btn" id="btnStart" onclick="goToStart()">|&lt;</button>
+      <button class="btn" id="btnPrev" onclick="stepBack()">&lt;</button>
+      <button class="btn" id="btnPlay" onclick="togglePlay()">Play</button>
+      <button class="btn" id="btnNext" onclick="stepForward()">&gt;</button>
+      <button class="btn" id="btnEnd" onclick="goToEnd()">&gt;|</button>
+      <span class="speed-label">Speed:</span>
+      <input type="range" id="speedSlider" min="100" max="2000" value="800" step="100">
+    </div>
+    <div class="nav-hint">Arrow keys: Left/Right to step. Space to play/pause.</div>
+  </div>
+
+  <div class="info-panel">
+    <div class="contract-bar" id="contractBar">Loading...</div>
+
+    <div class="info-section">
+      <h3>Score</h3>
+      <div class="score-row"><span>Tricks (Decl/Def):</span><span class="score-val" id="trickCount">-</span></div>
+      <div class="score-row"><span>Score:</span><span class="score-val" id="scoreVal">-</span></div>
+      <div class="score-row"><span>DD Optimal:</span><span class="score-val" id="ddScore">-</span></div>
+      <div class="score-row"><span>IMP Diff:</span><span class="score-val" id="impDiff">-</span></div>
+    </div>
+
+    <div class="info-section">
+      <h3>Auction</h3>
+      <div class="auction-display" id="auctionDisplay"></div>
+    </div>
+
+    <div class="info-section">
+      <h3>Tricks</h3>
+      <div class="trick-history" id="trickHistory"></div>
+    </div>
+
+    <div class="info-section">
+      <h3>Statistics</h3>
+      <div class="stat-grid" id="statsGrid"></div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot green"></div> DD Optimal</div>
+      <div class="legend-item"><div class="legend-dot red"></div> Mistake (loses tricks)</div>
+      <div class="legend-item"><div class="legend-dot yellow"></div> Suboptimal (no trick cost)</div>
+    </div>
+  </div>
+</div>
+
+<script>
+let dealData = null;
+let cardIndex = 0;
+let allCards = [];
+let playTimer = null;
+const SUITS = ['S','H','D','C'];
+const SUIT_SYMBOLS = {S:'\u2660', H:'\u2665', D:'\u2666', C:'\u2663'};
+const SUIT_CLASSES = {S:'suit-S', H:'suit-H', D:'suit-D', C:'suit-C'};
+const RANK_ORDER = '23456789TJQKA';
+const HCP_VALUES = {A:4, K:3, Q:2, J:1};
+
+function calcHCP(cards) {
+  let hcp = 0;
+  for (const c of cards) {
+    const rank = c[1];
+    if (HCP_VALUES[rank]) hcp += HCP_VALUES[rank];
+  }
+  return hcp;
+}
+
+function partnerOf(seat) {
+  const m = {N:'S', S:'N', E:'W', W:'E'};
+  return m[seat];
+}
+
+async function init() {
+  try {
+    const resp = await fetch('play_data/index.json');
+    const index = await resp.json();
+    const sel = document.getElementById('dealSelect');
+    sel.innerHTML = '';
+    index.forEach(d => {
+      const opt = document.createElement('option');
+      opt.value = d.file;
+      opt.textContent = `Deal ${d.deal_id}: ${d.contract}`;
+      sel.appendChild(opt);
+    });
+    if (index.length > 0) loadDeal(index[0].file);
+  } catch(e) {
+    document.getElementById('contractBar').textContent = 'Error loading deals';
+  }
+}
+
+async function loadDeal(file) {
+  if (!file) return;
+  try {
+    const resp = await fetch('play_data/' + file);
+    dealData = await resp.json();
+    buildCardList();
+    cardIndex = 0;
+    stopPlay();
+    render();
+  } catch(e) {
+    console.error(e);
+  }
+}
+
+function buildCardList() {
+  allCards = [];
+  if (!dealData) return;
+  dealData.tricks.forEach((trick, ti) => {
+    trick.cards.forEach(cp => {
+      allCards.push({...cp, trickIdx: ti});
+    });
+  });
+}
+
+function sortHand(cards) {
+  return [...cards].sort((a, b) => {
+    const si = SUITS.indexOf(a[0]) - SUITS.indexOf(b[0]);
+    if (si !== 0) return si;
+    return RANK_ORDER.indexOf(b[1]) - RANK_ORDER.indexOf(a[1]);
+  });
+}
+
+function renderHandLabels() {
+  if (!dealData) return;
+  const decl = dealData.contract.declarer;
+  const dummy = partnerOf(decl);
+  for (const seat of ['N','E','S','W']) {
+    const el = document.getElementById('label' + seat);
+    const hcp = calcHCP(dealData.hands[seat]);
+    let role = '';
+    if (seat === decl) role = `<span class="role-tag role-declarer">Decl</span>`;
+    else if (seat === dummy) role = `<span class="role-tag role-dummy">Dummy</span>`;
+    el.innerHTML = `${seat} <span class="hcp">(${hcp} HCP)</span>${role}`;
+  }
+}
+
+function renderHand(seatId, fullHand, playedSet) {
+  const el = document.getElementById('cards' + seatId);
+  const sorted = sortHand(fullHand);
+  let html = '';
+  for (const s of SUITS) {
+    const suitCards = sorted.filter(c => c[0] === s);
+    if (suitCards.length === 0) continue;
+    const cls = SUIT_CLASSES[s];
+    html += `<div class="suit-row"><span class="${cls}">${SUIT_SYMBOLS[s]} `;
+    suitCards.forEach(c => {
+      const played = playedSet.has(c);
+      html += `<span class="${played ? 'card-played' : ''}">${c[1]}</span>`;
+    });
+    html += '</span></div>';
+  }
+  el.innerHTML = html;
+}
+
+function renderTrickArea() {
+  const area = document.getElementById('trickArea');
+  const label = document.getElementById('trickLabel');
+  if (cardIndex === 0) {
+    area.innerHTML = '<div class="trick-label" style="color:#aaa;font-size:13px;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)">Press \u2192 to start</div>';
+    return;
+  }
+
+  const completedTricks = Math.floor(cardIndex / 4);
+  const cardsInCurrentTrick = cardIndex - completedTricks * 4;
+
+  let trickCards = [];
+  let trickNum = 0;
+  if (cardsInCurrentTrick > 0) {
+    const start = completedTricks * 4;
+    trickCards = allCards.slice(start, start + cardsInCurrentTrick);
+    trickNum = completedTricks + 1;
+  } else if (completedTricks > 0) {
+    const start = (completedTricks - 1) * 4;
+    trickCards = allCards.slice(start, start + 4);
+    trickNum = completedTricks;
+  }
+
+  let html = `<div class="trick-label" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:11px;color:rgba(255,255,255,0.3)">T${trickNum}</div>`;
+
+  for (const cp of trickCards) {
+    const pos = cp.seat.toLowerCase();
+    let cls = 'trick-card ' + pos;
+    if (cp.is_mistake) cls += ' mistake';
+    else if (cp.card === cp.dd_optimal) cls += ' optimal';
+    else cls += ' suboptimal';
+    const s = cp.card[0];
+    html += `<div class="${cls}"><span class="${SUIT_CLASSES[s]}">${SUIT_SYMBOLS[s]}${cp.card[1]}</span></div>`;
+  }
+  area.innerHTML = html;
+}
+
+function renderInfo() {
+  if (!dealData) return;
+  const c = dealData.contract;
+  const suffix = c.doubled === 1 ? 'X' : c.doubled === 2 ? 'XX' : '';
+  document.getElementById('contractBar').textContent =
+    `${c.level}${c.strain}${suffix} by ${c.declarer}`;
+
+  const r = dealData.result;
+  const declTricks = c.declarer === 'N' || c.declarer === 'S' ? r.tricks_ns : r.tricks_ew;
+  const defTricks = 13 - declTricks;
+  document.getElementById('trickCount').textContent = `${declTricks} / ${defTricks}`;
+  document.getElementById('scoreVal').textContent = r.score;
+  document.getElementById('ddScore').textContent = r.dd_score;
+
+  const impEl = document.getElementById('impDiff');
+  impEl.textContent = (r.imp_diff >= 0 ? '+' : '') + r.imp_diff;
+  impEl.className = 'score-val ' + (r.imp_diff > 0 ? 'imp-pos' : r.imp_diff < 0 ? 'imp-neg' : 'imp-zero');
+
+  // Auction
+  const auctionEl = document.getElementById('auctionDisplay');
+  auctionEl.innerHTML = dealData.auction.map(b => `<span class="bid">${b}</span>`).join(' ');
+
+  renderTrickHistory();
+  renderStats();
+}
+
+function renderTrickHistory() {
+  const el = document.getElementById('trickHistory');
+  const completedTricks = Math.floor(cardIndex / 4);
+  let html = '';
+  for (let ti = 0; ti < dealData.tricks.length; ti++) {
+    const trick = dealData.tricks[ti];
+    const isCurrent = ti === completedTricks - 1 || (ti === completedTricks && cardIndex % 4 > 0);
+    const isPlayed = ti < completedTricks || (ti === completedTricks && cardIndex % 4 > 0);
+    if (!isPlayed && ti > completedTricks) continue;
+    html += `<div class="trick-row${isCurrent ? ' current' : ''}">`;
+    html += `<span>T${ti+1}: `;
+    trick.cards.forEach((cp, ci) => {
+      const cardPlayed = ti * 4 + ci < cardIndex;
+      if (cardPlayed) {
+        const cls = cp.is_mistake ? 'color:#f66' : cp.card === cp.dd_optimal ? 'color:#6f6' : 'color:#fc4';
+        html += `<span style="${cls}">${cp.seat}:${cp.card}</span> `;
+      }
+    });
+    html += '</span>';
+    if (ti < completedTricks) {
+      html += `<span class="trick-winner">${trick.winner}</span>`;
+    }
+    html += '</div>';
+  }
+  el.innerHTML = html;
+}
+
+function renderStats() {
+  const el = document.getElementById('statsGrid');
+  if (!dealData) return;
+  let mistakes = 0, ddMatch = 0, total = 0;
+  dealData.tricks.forEach(t => t.cards.forEach(cp => {
+    total++;
+    if (cp.card === cp.dd_optimal) ddMatch++;
+    if (cp.is_mistake) mistakes++;
+  }));
+  // HCP per side
+  const decl = dealData.contract.declarer;
+  const dummy = partnerOf(decl);
+  const declHcp = calcHCP(dealData.hands[decl]) + calcHCP(dealData.hands[dummy]);
+  const defHcp = 40 - declHcp;
+  el.innerHTML = `
+    <div class="stat-item">DD Match: <span class="stat-val">${total > 0 ? (ddMatch/total*100).toFixed(0) : 0}%</span></div>
+    <div class="stat-item">Mistakes: <span class="stat-val">${mistakes}</span></div>
+    <div class="stat-item">Decl HCP: <span class="stat-val">${declHcp}</span></div>
+    <div class="stat-item">Def HCP: <span class="stat-val">${defHcp}</span></div>
+    <div class="stat-item">Step: <span class="stat-val">${cardIndex}/${total}</span></div>
+  `;
+}
+
+function render() {
+  if (!dealData) return;
+  const playedPerSeat = {N: new Set(), E: new Set(), S: new Set(), W: new Set()};
+  for (let i = 0; i < cardIndex && i < allCards.length; i++) {
+    playedPerSeat[allCards[i].seat].add(allCards[i].card);
+  }
+  renderHandLabels();
+  for (const seat of ['N','E','S','W']) {
+    renderHand(seat, dealData.hands[seat], playedPerSeat[seat]);
+  }
+  renderTrickArea();
+  renderInfo();
+
+  document.getElementById('btnPrev').disabled = cardIndex <= 0;
+  document.getElementById('btnStart').disabled = cardIndex <= 0;
+  document.getElementById('btnNext').disabled = cardIndex >= allCards.length;
+  document.getElementById('btnEnd').disabled = cardIndex >= allCards.length;
+}
+
+function stepForward() { if (cardIndex < allCards.length) { cardIndex++; render(); } }
+function stepBack() { if (cardIndex > 0) { cardIndex--; render(); } }
+function goToStart() { cardIndex = 0; render(); }
+function goToEnd() { cardIndex = allCards.length; render(); }
+
+function togglePlay() { if (playTimer) stopPlay(); else startPlay(); }
+function startPlay() {
+  if (cardIndex >= allCards.length) cardIndex = 0;
+  const speed = parseInt(document.getElementById('speedSlider').value);
+  playTimer = setInterval(() => {
+    if (cardIndex >= allCards.length) { stopPlay(); return; }
+    stepForward();
+  }, speed);
+  document.getElementById('btnPlay').textContent = 'Pause';
+}
+function stopPlay() {
+  if (playTimer) { clearInterval(playTimer); playTimer = null; }
+  document.getElementById('btnPlay').textContent = 'Play';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight') { e.preventDefault(); stepForward(); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); stepBack(); }
+  else if (e.key === ' ') { e.preventDefault(); togglePlay(); }
+  else if (e.key === 'Home') { e.preventDefault(); goToStart(); }
+  else if (e.key === 'End') { e.preventDefault(); goToEnd(); }
+});
+
+init();
+</script>
+</body>
+</html>

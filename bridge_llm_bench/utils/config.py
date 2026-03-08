@@ -189,6 +189,148 @@ PASSED HAND: may open lighter in 3rd/4th seat (10-11 HCP ok). \
 Passed hand responses are non-forcing (no longer unlimited).\
 """
 
+# ── System-Specific Knowledge References ──────────────────────────────
+
+TWO_OVER_ONE_KNOWLEDGE = """\
+2/1 Game-Forcing Complete Reference:
+OPENING BIDS: 12-21 HCP required. 5+ card major open 1H/1S (higher first with 5-5). \
+No 5-card major: open longest minor (1C with 3-3, 1D with 4-4). \
+14-16 balanced open 1NT (some play 15-17). 20-21 balanced open 2NT. \
+22+ HCP open 2C (strong artificial, 2D=waiting). \
+Weak 2 (2D/2H/2S) = 5-11 HCP + good 6-card suit. \
+3-level preempt = 7-card suit too weak to open at 1. Pass with <12 HCP and no preempt shape.
+KEY DIFFERENCE: A 2/1 response (2C, 2D, 2H over 1S) by unpassed hand = GAME FORCING. \
+No need for jump shifts to show strength — a simple 2-level new suit commits to game. \
+1NT response to 1H/1S by unpassed hand is SEMI-FORCING (opener must bid with unbalanced hand).
+RESPONSES TO 1H/1S: 6-9 raise with 3+ trump; 10-12 limit raise via 1NT then raise; \
+13+ 2/1 response (game forcing) or Jacoby 2NT (4+ trump, game forcing); \
+jump to 4M with 5+ trump and <10 HCP (preemptive). New suit at 1-level=4+ cards, forcing.
+RESPONSES TO 1C/1D: New suit at 1-level (4+ cards, bid up the line) preferred; \
+1NT=6-10; 2/1 in new suit=game forcing by unpassed hand.
+RESPONSES TO 1NT: 2C=Stayman; 2D=transfer to 2H, 2H=transfer to 2S (5+ cards); \
+2NT=invitational; 4C=Gerber; 4NT=quantitative. 0-7 HCP Pass or transfer+pass.
+OPENER REBIDS: After 2/1 GF response, all bids are natural and forcing until game. \
+Min(12-14) rebid suit/cheapest NT; Med(15-17) jump; Max(18+) new suits/jumps.
+COMPETITIVE: Overcall 1-level=8-16 HCP 5+ cards; 1NT overcall=15-18 balanced with stopper; \
+Takeout X=support for unbid suits 12+. Negative X thru 3S. \
+Unusual 2NT=5-5+ two lowest unbid; Michaels cuebid=5-5 majors or major+minor.
+SLAM: RKCB 4NT=ace ask (1430 responses); Gerber 4C over NT.
+PASSED HAND: 2/1 response by passed hand is NOT game forcing — just a good hand.\
+"""
+
+ACOL_KNOWLEDGE = """\
+Standard Acol Complete Reference:
+OPENING BIDS: 11-19 HCP. 4+ card major open 1H/1S (with two 4-card majors, open 1H). \
+4-card suits: open longest. 12-14 balanced open 1NT (weak NT). \
+20-22 balanced open 2NT. 23+ or game-forcing open 2C (2D=negative). \
+Strong twos: 2H/2S = 8 playing tricks, 16-22 HCP (one-round force). \
+Weak 3-level preempts = 7-card suit. Pass with <11 HCP and no preempt shape.
+KEY DIFFERENCE: 4-CARD MAJORS. Open 1H with AKxx Qxxx xx Axx (only 4 hearts). \
+Weak NT (12-14) instead of strong (15-17). Strong 2-bids at 2H/2S level.
+RESPONSES TO 1H/1S: 6-9 raise with 4+ trump (need 4 since opener may have only 4); \
+10-12 limit raise (3-card ok if strong); 13+ game force new suit or jump raise; \
+1NT=6-10 (may have 4 cards in unbid major). New suit at 1-level=4+ cards, forcing.
+RESPONSES TO 1C/1D: New suit at 1-level preferred; 1NT=6-10; raise=4+ support.
+RESPONSES TO 1NT (12-14): 2C=Stayman (need 4-card major, 11+ HCP); \
+2D=transfer to 2H, 2H=transfer to 2S; 2NT=invitational (11-12); \
+3NT=13-19. 0-10 HCP with no fit: Pass.
+OPENER REBIDS: After 1-level response, bid naturally. Reverse=16+. \
+After 2-level response: min rebid suit, raise, or 2NT.
+COMPETITIVE: Overcall 1-level=8-16 HCP 5+ cards; 1NT overcall=15-18 balanced with stopper; \
+Takeout X=support for unbid suits 12+. Negative X. \
+Unusual 2NT, Michaels cuebids same as Standard American.
+SLAM: Blackwood 4NT=ace ask (0-1-2-3-4); Gerber 4C over NT. Cue-bid controls.
+PASSED HAND: may open lighter in 3rd/4th seat. Responses non-forcing.\
+"""
+
+PRECISION_KNOWLEDGE = """\
+Precision Club Complete Reference:
+OPENING BIDS: 1C = 16+ HCP, ARTIFICIAL AND FORCING (any shape). \
+1D = 11-15 HCP, may be short (could be 0-1 diamonds with no 5-card suit). \
+1H = 11-15 HCP, 5+ hearts. 1S = 11-15 HCP, 5+ spades. \
+1NT = 13-15 balanced. 2C = 11-15 HCP, 6+ clubs (natural, NOT strong). \
+2D = 11-15 HCP, 4-4-1-4 or 4-4-0-5 (short diamond convention) or 6+ diamonds. \
+2H/2S = weak, 5-10 HCP + 6-card suit. 2NT = unusual (minors). \
+3-level = preemptive. Pass with <11 HCP and no preempt shape.
+KEY DIFFERENCE: 1C is ARTIFICIAL (16+), NOT clubs. 2C is NATURAL (6+ clubs, 11-15). \
+All openings except 1C are LIMITED (11-15), making bidding easier after they open.
+RESPONSES TO 1C (16+): 1D = 0-7 HCP (negative/waiting); \
+1H/1S = 8+ HCP, 5+ cards (positive, game force); \
+1NT = 8-13 balanced; 2C/2D = 8+ HCP, 5+ cards (game force); \
+2NT = 14+ balanced.
+RESPONSES TO 1D (11-15, may be short): 1H/1S = 4+ cards, forcing; \
+1NT = 8-10 balanced; 2C = 10+ natural; 2D = 10+ 4+ support; \
+3NT = 14-15 balanced, no major.
+RESPONSES TO 1H/1S (11-15, 5+): raise with 3+ support; new suit forcing; \
+1NT = 6-10; jump raise = limit (10-12).
+RESPONSES TO 1NT (13-15): 2C = Stayman; transfers; 2NT = invitational.
+COMPETITIVE: Same as standard — overcalls, takeout X, negative X. \
+Unusual 2NT, Michaels. Against opponents' 1C (if natural), X = 16+.
+SLAM: RKCB 4NT after trump agreed. Cue-bid controls.\
+"""
+
+SEF_KNOWLEDGE = """\
+Standard European Française (SEF) Complete Reference:
+OPENING BIDS: 12-21 HCP. 5+ card major open 1H/1S (higher with 5-5). \
+No 5-card major: open 1m (1D with 4+, 1C with 3-3 minors). \
+15-17 balanced open 1NT. 20-21 balanced open 2NT. \
+2C = STRONG ARTIFICIAL (22+ or game force), 2D=waiting. \
+2D/2H/2S = weak, 5-11 HCP + good 6-card suit. \
+3-level preempt = 7-card suit. Pass with <12 HCP and no preempt shape.
+KEY DIFFERENCE FROM SAYC: Checkback Stayman (Roudi) — after opener rebids 1NT, \
+responder's 2C is ARTIFICIAL asking opener to clarify (like New Minor Forcing). \
+Opener rebids: 2D = minimum without 3-card major support; 2H = minimum with 3H; \
+2S = minimum with 3S; 2NT = maximum without support; 3H/3S = maximum with support.
+RESPONSES TO 1H/1S: 6-9 raise with 3+ trump or 1NT (non-forcing); \
+10-12 limit raise or 2NT (Jacoby); 13+ 2/1 game force or Jacoby 2NT; \
+jump to 4M = preemptive raise. New suit 1-level = forcing.
+RESPONSES TO 1C/1D: New suit at 1-level (4+ cards, up the line); 1NT=6-10; \
+raise = 5+ support.
+RESPONSES TO 1NT (15-17): 2C=Stayman; 2D/2H=transfers; 2NT=invitational; \
+4C=Gerber.
+OPENER REBIDS: After new suit, rebid naturally. 1NT = 12-14 (then Roudi applies). \
+Reverse = 16+. Jump rebid = 16-18.
+COMPETITIVE: Overcall = 8-16 + 5+ cards; 1NT overcall = 15-18 + stopper; \
+Takeout X = 12+ support for unbid suits. Negative X standard. \
+Unusual 2NT, Michaels cuebids.
+SLAM: Blackwood 4NT. Cue-bid controls. Grand Slam Force.\
+"""
+
+POLISH_CLUB_KNOWLEDGE = """\
+Polish Club Complete Reference:
+OPENING BIDS: 1C = 12-14 balanced OR 18+ any shape (DUAL MEANING, forcing). \
+1D = 12-17 HCP, unbalanced, 4+ diamonds (natural). \
+1H = 12-17 HCP, 5+ hearts. 1S = 12-17 HCP, 5+ spades. \
+1NT = 15-17 balanced. 2C = 12-17 HCP, 6+ clubs (natural, strong suit). \
+2D = weak, 5-10 HCP + 6+ diamonds. 2H/2S = weak, 5-10 + 6-card suit. \
+2NT = 20-21 balanced. 3-level = preemptive. Pass with <12 HCP.
+KEY DIFFERENCE: 1C is DUAL — either weak balanced (12-14) or very strong (18+). \
+Responder must bid to clarify. If opener rebids naturally at low level = weak balanced. \
+If opener makes a strong rebid (reverse, jump) = 18+.
+RESPONSES TO 1C: 1D = 0-7 any (negative/waiting); \
+1H/1S = 8+ HCP, 4+ cards (natural, forcing); \
+1NT = 8-11 balanced (no 4-card major); \
+2C = 12+ natural or relay; 2D = 8+ 5+ diamonds.
+RESPONSES TO 1D (12-17, 4+D): 1H/1S = 4+ cards, forcing; \
+1NT = 6-10; 2D = 6-10 with 4+ support; 3D = limit raise.
+RESPONSES TO 1H/1S (12-17, 5+): raise with 3+ support; new suit forcing; \
+1NT = 6-10; jump raise = limit (10-12).
+RESPONSES TO 1NT (15-17): 2C=Stayman; 2D/2H=transfers; 2NT=invitational.
+COMPETITIVE: Overcall = 8-16 + 5+ cards; Takeout X = 12+ unbid suits; \
+1NT overcall = 15-18 + stopper. Against opponents' 1C, \
+X = strong (16+). Unusual 2NT, Michaels.
+SLAM: RKCB 4NT. Cue-bid controls once trump agreed.\
+"""
+
+SYSTEM_KNOWLEDGE = {
+    "SAYC": SAYC_KNOWLEDGE,
+    "2/1": TWO_OVER_ONE_KNOWLEDGE,
+    "ACOL": ACOL_KNOWLEDGE,
+    "PRECISION": PRECISION_KNOWLEDGE,
+    "SEF": SEF_KNOWLEDGE,
+    "POLISH_CLUB": POLISH_CLUB_KNOWLEDGE,
+}
+
 # ── Prompt Templates ─────────────────────────────────────────────────
 # "standard" = baseline (identical for all models)
 # "knowledge" = includes SAYC reference guide
